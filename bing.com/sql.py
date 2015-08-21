@@ -35,17 +35,21 @@ print
 #--------------------------------------------------------------
 file = open('url_pars.txt', 'w')
 file.close()
-search = raw_input('Text of dork (example:index.php?id=):')
+#search = raw_input('Text of dork (example:index.php?id=):')
 #search = 'post.php?id='
 #------------------Dorks list----------------------------------
 dorks = open('dorks.txt' , 'r')
 dorks_list = dorks.readlines()
 dorks.close()
-#pages = int(raw_input('Number of page: '))*10
+#--------------------------------------------------------------
+pages = int(raw_input('Number of page: '))*10
 #pages = 10
-headers = {'User-Agent' : 'Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0)'}
-count = 1
-while (count < pages):
+for i in range(len(dorks_list)):
+    search = dorks_list[i].strip()
+    print 'Number of dorks: '+str(len(dorks_list))
+    print 'Use dork: '+search
+    count = 1
+    while (count < pages):
 #http://www.bing.com/search?q=index.php?id=&go=&filt=all&first=1&FORM=PERE3
 	req = ('http://www.bing.com/search?q=' + search + '&first='+str(count))
 	try:	
@@ -108,6 +112,7 @@ for i in range(len(url_list)):
                         if responce.text.find(err)>0:
                                 print 'FIND "'+err+'" in '+page
                                 open('good.txt', 'a+').write(page + '\n')
+				good_page = good_page + 1
                 #else:
                         #print ''
 #-------------------------------------------------------------------
