@@ -1,3 +1,1 @@
-post.php?id=
-read.php?=
-index.php?id=
+memberInfo.php?id=

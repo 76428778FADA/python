@@ -46,7 +46,7 @@ pages = int(raw_input('Number of page: '))*10
 #pages = 10
 for i in range(len(dorks_list)):
     search = dorks_list[i].strip()
-    print 'Number of dorks: '+str(len(dorks_list))
+    #print 'Number of dorks: '+str(len(dorks_list))
     print 'Use dork: '+search
     count = 1
     while (count < pages):
@@ -55,21 +55,25 @@ for i in range(len(dorks_list)):
 	try:	
 	    response = requests.get(req)
 	except:
-	    print 'ERROR'
+	    print 'Error get bing.com'
 	#print response.text	
 	req = ''	
-	link = re.findall('<h2><a href="(.+?)"', response.text, re.DOTALL)
-	for i in range(len(link)):
+	try:
+	    link = re.findall('<h2><a href="(.+?)"', response.text, re.DOTALL)
+	    for i in range(len(link)):
 		#print link[i]
 		#if link[i].find('yandex'):
 		#	print 'YANDEX'
 		#else:
-		if link[i].find('http://bs.yandex.ru'):	
+	        if link[i].find('http://bs.yandex.ru'):
+		    print 'url: '+link[i]	
 		    open('url_pars.txt', 'a+').write(link[i] +'\'' + '\n')
 		#else:
 		    #print 'ya'
 		#count = count+10
 		#print count
+	except:
+	    print 'Error parsing url'
 	count = count+10
 	#print count
 #---------------------Delete duplicates-------------------------
