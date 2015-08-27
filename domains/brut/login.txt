@@ -1,4 +1,2 @@
 administrator
-root
 admin
-

