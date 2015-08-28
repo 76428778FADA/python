@@ -28,7 +28,7 @@ file = open('domains.txt' , 'r')
 d_list = file.readlines()
 file.close()
 #----
-#domain_file = "domains.txt"
+domain_file = "domains.txt"
 
 #theard_count = 5
 def brut(host, login, pwd):
@@ -80,7 +80,7 @@ def run(queue, result_queue):
     while not queue.empty():
         # получаем первую задачу из очереди
         host = queue.get_nowait()
-        print '{} checking in thread {}'.format(host, current_thread())
+        print('{} checking in thread {}'.format(host, current_thread()))
         # проверяем URL
         status = brut(host, login, pwd)
         # сохраняем результат для дальнейшей обработки
@@ -88,12 +88,12 @@ def run(queue, result_queue):
         # сообщаем о выполнении полученной задачи
         queue.task_done()
         if status:
-            print '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+            print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
             open('good.txt', 'a+').write(host + '\n')
         else:
             pass
-        print '{} finished in thread {}. Result={}'.format(host, current_thread(), status)
-    print '{} closing'.format(current_thread())
+        print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
+    print('{} closing'.format(current_thread()))
 
 # MAIN
 def main():
@@ -120,7 +120,7 @@ def main():
     # И ждем, когда задачи будут выполнены    
     queue.join()
 
-    print time.time() - start_time
+    print(time.time() - start_time)
 
 if __name__ == '__main__':
-    main()'''
+    main()
