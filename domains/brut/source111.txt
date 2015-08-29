@@ -1,0 +1,12 @@
+admin 198616
+admin 123456
+admin admin
+admin administrator
+admin 12345678
+admin 123456789
+administrator 198616
+administrator 123456
+administrator admin
+administrator administrator
+administrator 12345678
+administrator 123456789
