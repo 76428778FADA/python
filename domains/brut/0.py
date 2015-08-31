@@ -16,7 +16,7 @@ headers = {
 
 source_file = "source.txt"
 
-theard_count = 50
+theard_count = 1
 def brut(string):
     t = string.split()
     payload = {
@@ -57,7 +57,7 @@ def run(queue, result_queue):
         # сообщаем о выполнении полученной задачи
         queue.task_done()
         if status:
-            print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+            print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
             open('good.txt', 'a+').write(host + '\n')
         else:
             pass

