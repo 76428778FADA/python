@@ -46,6 +46,7 @@ def run(queue, result_queue):
         # получаем первую задачу из очереди
         host = queue.get_nowait()
         print('Checking in thread {}'.format(current_thread()))
+        print(host)
 	# проверяем URL
         try:
             status = brut(host)
