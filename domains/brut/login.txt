@@ -1,4 +1,3 @@
 admin
 administrator
-root
 user

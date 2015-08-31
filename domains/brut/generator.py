@@ -39,7 +39,7 @@ def gen_host():
             open('source.txt', 'a+').write(s+' '+pwd+' '+s+'\n')
         for i in range(len(pwd_list)):
             pwd = pwd_list[i].strip()
-            open('source.txt', 'a+').write(s+' '+pwd+' '+s+'\n')
+            open('source.txt', 'a+').write(login+' '+pwd+' '+s+'\n')
 
 gen()
 gen_host()
