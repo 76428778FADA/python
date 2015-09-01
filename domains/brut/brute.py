@@ -16,7 +16,7 @@ headers = {
 
 source_file = "source.txt"
 
-theard_count = 100
+theard_count = 150
 def brut(string):
     t = string.split()
     payload = {

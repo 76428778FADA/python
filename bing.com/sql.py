@@ -77,17 +77,29 @@ for i in range(len(dorks_list)):
 	count = count+10
 	#print count
 #---------------------Delete duplicates-------------------------
+def f7(seq):
+    seen = set()
+    seen_add = seen.add
+    return [ x for x in seq if not (x in seen or seen_add(x))]
+
 print 'Removing duplicates...'
 input = open('url_pars.txt', 'r')
 output = open('url.txt', 'w')
 linesarray = input.readlines()
 input.close()
 seen = []
+seen = f7(linesarray)
+print(seen)
+for i in range(len(seen)):
+    output.write(seen[i])
+'''linesarray = input.readlines()
+input.close()
+seen = []
 for i in range(len(linesarray)):
     if seen.count(linesarray[i]) == 0:
         seen.append(linesarray[i])
 	#if linesarray[i].find('http://bs.yandex.ru'):
-	output.write(linesarray[i])		
+	output.write(linesarray[i])'''		
         #else:
 		#print 'ya'
 	
