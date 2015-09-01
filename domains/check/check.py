@@ -3,7 +3,7 @@ import requests
 import time
 import os
 from threading import Thread, current_thread
-from Queue import Queue
+from queue import Queue
 
 
 theard_count = 300
@@ -33,7 +33,7 @@ def run(queue, result_queue):
     while not queue.empty():
         # получаем первую задачу из очереди
         host = queue.get_nowait()
-        print '{} checking in thread {}'.format(host, current_thread())
+        print('{} checking in thread {}'.format(host, current_thread()))
         # проверяем URL
         status = check_url(host)
         # сохраняем результат для дальнейшей обработки
@@ -41,12 +41,12 @@ def run(queue, result_queue):
         # сообщаем о выполнении полученной задачи
         queue.task_done()
         if status:
-            print '!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!'
+            print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
             open('good.txt', 'a+').write(host + '\n')
         else:
             pass
-        print '{} finished in thread {}. Result={}'.format(host, current_thread(), status)
-    print '{} closing'.format(current_thread())
+        print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
+    print('{} closing'.format(current_thread()))
 
 
 # MAIN
@@ -71,23 +71,9 @@ def main():
         thread.daemon = True
         thread.start()
 
-    # И ждем, когда задачи будут выполнены    
     queue.join()
 
-    # После чего пишем результаты в файлы
-    '''with open(fr_success, 'a+') as fs, open(fr_errors, 'w') as fe:
-        while not result_queue.empty():
-            status, host = result_queue.get_nowait()
-
-            if status:
-                f = fs
-            else:
-                f = fe
-
-            f.write(host)
-            f.write('\n')'''
-
-    print time.time() - start_time
+    print(time.time() - start_time)
 
 if __name__ == '__main__':
     main()

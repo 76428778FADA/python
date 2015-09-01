@@ -1,6 +1,10 @@
 # coding=utf-8
 import os
 
+#------------------source list----------------------------------
+source = open('source.txt' , 'w')
+source.close()
+#--------------------------------------------------------------
 #------------------login list----------------------------------
 login = open('login.txt' , 'r')
 login_list = login.readlines()
@@ -32,11 +36,14 @@ def gen():
 def gen_host():
     for i in range(len(domains_list)):
         s = domains_list[i].strip()
-        t = s.split('.')    
-        login = t[0]
-        for i in range(len(pwd_list)):
+        t = s.split('.')
+        if t[0].find('www'):    
+            login = t[0]
+        else:
+            login = t[1]
+        '''for i in range(len(pwd_list)):
             pwd = pwd_list[i].strip()
-            open('source.txt', 'a+').write(s+' '+pwd+' '+s+'\n')
+            open('source.txt', 'a+').write(s+' '+pwd+' '+s+'\n')'''
         for i in range(len(pwd_list)):
             pwd = pwd_list[i].strip()
             open('source.txt', 'a+').write(login+' '+pwd+' '+s+'\n')

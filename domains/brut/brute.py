@@ -15,8 +15,8 @@ headers = {
 }
 
 source_file = "source.txt"
-
-theard_count = 150
+#theard_count = int(input('Number of threads: '))
+theard_count = 300
 def brut(string):
     t = string.split()
     payload = {

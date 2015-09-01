@@ -2,9 +2,7 @@
 1234
 123456
 admin
-administrator
 12345678
 123456789
-pass
 123123
 123
