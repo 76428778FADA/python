@@ -1,7 +1,7 @@
 # coding=utf-8
 import os
 
-domains = open('dom.txt' , 'r')
+domains = open('rf_domains' , 'r')
 domains_list = domains.readlines()
 domains.close()
 
