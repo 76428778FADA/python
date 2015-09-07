@@ -49,7 +49,7 @@ def gen_host():
             open('source.txt', 'a+').write(login+' '+pwd+' '+s+'\n')
 
 gen()
-gen_host()
+#gen_host()
 '''def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():
