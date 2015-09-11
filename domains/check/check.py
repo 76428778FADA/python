@@ -9,6 +9,7 @@ from queue import Queue
 theard_count = 300
 headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
 domain_file = "domains.txt"
+open('good.txt','w')
 #domain_temp = ""
 
 
