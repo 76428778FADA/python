@@ -15,7 +15,6 @@ open('good.txt','w')
 
 def check_url(host):
     url = 'http://'+host+'/wp-login.php'
-
     try:
         response = requests.get(url, timeout=10, headers=headers)
     except Exception:
@@ -23,11 +22,24 @@ def check_url(host):
     else:
         if response.status_code == 200:
             if response.text.find('wp-admin')>0:
-                return True
-            else:
-                return False       
-        else:
-            return False
+                return 2
+            #else:
+                #return False       
+        #else:
+            #return False
+    url1 = 'http://'+host+'/administrator/index.php'
+    try:
+        response1 = requests.get(url1, timeout=10, headers=headers)
+    except Exception:
+        return False
+    else:
+        if response1.status_code == 200:
+            if response1.text.find('loginform')>0:
+                return 3
+            #else:
+                #return False       
+        #else:
+            #return False
 
 def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
@@ -41,9 +53,14 @@ def run(queue, result_queue):
         result_queue.put_nowait((status, host))
         # сообщаем о выполнении полученной задачи
         queue.task_done()
-        if status:
-            print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-            open('good.txt', 'a+').write(host + '\n')
+        if status == 2:
+            print('WPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWP')
+            open('good_wp.txt', 'a+').write(host + '\n')
+        else:
+            pass
+        if status == 3:
+            print('JOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOO')
+            open('good_joo.txt', 'a+').write(host + '\n')
         else:
             pass
         print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
