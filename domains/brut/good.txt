@@ -34,3 +34,11 @@ admin 123456 XN----8SBABUORC4A8BI1J.XN--P1AI
 
 admin 12345 INEGOLOBJEKTIF.NET
 admin pass demos1.softaculous.com/WordPress
+admin pass AMANFOUNDATION.NET
+admin 12345 HEALTHACE.NET
+admin admin SHOPINMEXICOCITY.NET
+admin admin SHOPINSTYLE.NET
+admin admin SHOPINTOKYO.NET
+admin admin SHOPINENGLAND.NET
+admin admin SHOPINEUROPE.NET
+admin admin SHOPINAUSTRALIA.NET

