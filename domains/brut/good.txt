@@ -26,19 +26,10 @@ not work
 admin admin IT-DOMAIN.NET
 admin admin DOTCOMACADEMY.NET
 admin 123123 DIAGONALFLYING.NET
-admin 12345 ALMANYA-EGITIM.NET
-
-work
-admin 123456 MITRANOVA.NET
-admin 123456 XN----8SBABUORC4A8BI1J.XN--P1AI
-
+admin admin classifieds.nasn.net
 admin 12345 INEGOLOBJEKTIF.NET
-admin pass demos1.softaculous.com/WordPress
 admin pass AMANFOUNDATION.NET
-admin 12345 HEALTHACE.NET
-admin admin SHOPINMEXICOCITY.NET
-admin admin SHOPINSTYLE.NET
-admin admin SHOPINTOKYO.NET
-admin admin SHOPINENGLAND.NET
-admin admin SHOPINEUROPE.NET
-admin admin SHOPINAUSTRALIA.NET
+
+admin pass demos1.softaculous.com/WordPress
+
+
