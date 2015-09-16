@@ -1,18 +1,18 @@
-def f7(seq):
-    seen = set()
-    seen_add = seen.add
-    return [ x for x in seq if not (x in seen or seen_add(x))]
+import lxml.html
+import requests
 
-print('Removing duplicates...')
-input = open('1.txt', 'r')
-output = open('2.txt', 'w')
-
-linesarray = input.readlines()
-input.close()
-seen = []
-seen = f7(linesarray)
-print(seen)
-for i in range(len(seen)):
-    output.write(seen[i])
-output.close()
-print 'Complete'
+r = requests.get("http://tw1ns.mysit.ru/administrator")
+parsed = lxml.html.fromstring(r.text)
+links = parsed.xpath("//input[@value]")
+list = []
+for i in links:
+    print(i)	
+    #print(i.attrib['value'])
+    t = (i.attrib['value'])
+    list.append(t)
+for i in links:
+    #print(i.attrib['name'])
+    s = (i.attrib['name'])
+#print(t)
+print(s)
+print(list[2])

