@@ -32,4 +32,3 @@ admin pass AMANFOUNDATION.NET
 
 admin pass demos1.softaculous.com/WordPress
 
-

