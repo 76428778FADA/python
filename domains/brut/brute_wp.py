@@ -68,7 +68,7 @@ def run(queue, result_queue):
         queue.task_done()
         if status == True:
             print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-            open('good.txt', 'a+').write(host + '\n')
+            open('good.txt', 'a+').write('WP: '+host + '\n')
         else:
             pass
         print('Finished in thread {}. Result={}'.format(current_thread(), status))

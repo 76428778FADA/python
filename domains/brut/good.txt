@@ -29,6 +29,29 @@ admin 123123 DIAGONALFLYING.NET
 admin admin classifieds.nasn.net
 admin 12345 INEGOLOBJEKTIF.NET
 admin pass AMANFOUNDATION.NET
+WP: admin pass CARLANA.NET
+WP: admin 123456 CIZGIFILMTV.NET
+WP: admin admin DEIDEA.NET
+WP: admin admin WPCDATA.NET
 
 admin pass demos1.softaculous.com/WordPress
 
+Joomla: admin pass tw1ns.mysit.ru
+Joomla: admin 1234 ESLAMENAB.NET
+Joomla: admin admin JTRACKGALLERY.NET
+Joomla: admin admin BERND-PELZER.NET
+Joomla: admin admin STOPDISCRIMINATION.NET
+Joomla: admin qwerty LASERGUTACHTER.NET
+Joomla: admin 12345678 AKANTE.NET
+Joomla: admin 12345 COMPUTER-HELFER.NET
+Joomla: admin admin DATACOMTEC.NET
+Joomla: admin 12345 DBSQWARE.NET
+Joomla: admin 12345 DLI-INC.NET
+
+
+WP: admin admin MOJOWORLD.NET
+WP: admin qwerty RADOSH-STYLE.NET
+Joomla: admin admin JARRALRAJPUT.NET
+Joomla: admin admin JEUROCOMP.NET
+Joomla: admin admin SMARTERHOMESOLUTIONS.NET
+Joomla: admin qwerty SKIDAWAYWEB.NET

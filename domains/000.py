@@ -6,10 +6,9 @@ parsed = lxml.html.fromstring(r.text)
 links = parsed.xpath("//input[@value]")
 list = []
 for i in links:
-    print(i)	
     #print(i.attrib['value'])
-    t = (i.attrib['value'])
-    list.append(t)
+    #t = (i.attrib['value'])
+    list.append(i.attrib['value'])
 for i in links:
     #print(i.attrib['name'])
     s = (i.attrib['name'])

