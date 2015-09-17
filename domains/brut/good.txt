@@ -50,7 +50,6 @@ Joomla: admin 12345 DLI-INC.NET
 
 
 WP: admin admin MOJOWORLD.NET
-WP: admin qwerty RADOSH-STYLE.NET
 Joomla: admin admin JARRALRAJPUT.NET
 Joomla: admin admin JEUROCOMP.NET
 Joomla: admin admin SMARTERHOMESOLUTIONS.NET
