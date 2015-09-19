@@ -33,32 +33,12 @@ WP: admin pass CARLANA.NET
 WP: admin 123456 CIZGIFILMTV.NET
 WP: admin admin DEIDEA.NET
 WP: admin admin WPCDATA.NET
+WP: admin pass IBAPP.NET
+WP: admin admin PHILIPPINEFIESTA.NET
+WP: admin qwerty ULCER-TREATMENT.NET
 
 admin pass demos1.softaculous.com/WordPress
 
 Joomla: admin pass tw1ns.mysit.ru
-Joomla: admin 1234 ESLAMENAB.NET
-Joomla: admin admin JTRACKGALLERY.NET
-Joomla: admin admin BERND-PELZER.NET
-Joomla: admin admin STOPDISCRIMINATION.NET
-Joomla: admin qwerty LASERGUTACHTER.NET
-Joomla: admin 12345678 AKANTE.NET
-Joomla: admin 12345 COMPUTER-HELFER.NET
-Joomla: admin admin DATACOMTEC.NET
-Joomla: admin 12345 DBSQWARE.NET
-Joomla: admin 12345 DLI-INC.NET
 
-
-WP: admin admin MOJOWORLD.NET
-Joomla: admin admin JARRALRAJPUT.NET
-Joomla: admin admin JEUROCOMP.NET
-Joomla: admin admin SMARTERHOMESOLUTIONS.NET
-Joomla: admin qwerty SKIDAWAYWEB.NET
-WP: admin pass IBAPP.NET
-WP: admin admin PHILIPPINEFIESTA.NET
-WP: admin qwerty ULCER-TREATMENT.NET
 Joomla: admin 123456 TOURSYS.NET
-Joomla: admin 123456 MRBARBQ.NET
-Joomla: admin admin SLOMA.NET
-Joomla: admin admin LOHUNGKEE.NET
-Joomla: admin admin TAASPORTS.NET
