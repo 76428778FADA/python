@@ -54,3 +54,11 @@ Joomla: admin admin JARRALRAJPUT.NET
 Joomla: admin admin JEUROCOMP.NET
 Joomla: admin admin SMARTERHOMESOLUTIONS.NET
 Joomla: admin qwerty SKIDAWAYWEB.NET
+WP: admin pass IBAPP.NET
+WP: admin admin PHILIPPINEFIESTA.NET
+WP: admin qwerty ULCER-TREATMENT.NET
+Joomla: admin 123456 TOURSYS.NET
+Joomla: admin 123456 MRBARBQ.NET
+Joomla: admin admin SLOMA.NET
+Joomla: admin admin LOHUNGKEE.NET
+Joomla: admin admin TAASPORTS.NET
