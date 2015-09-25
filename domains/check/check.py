@@ -6,7 +6,7 @@ from threading import Thread, current_thread
 from queue import Queue
 
 
-theard_count = 200
+theard_count = 300
 headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
 domain_file = "domains.txt"
 open('good_wp.txt','w')
@@ -66,8 +66,12 @@ def run(queue, result_queue):
             pass
         print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
     print('{} closing'.format(current_thread()))
-
-
+# Remove duplicate
+def f7(seq):
+    seen = set()
+    seen_add = seen.add
+    return [ x for x in seq if not (x in seen or seen_add(x))]
+    
 # MAIN
 def main():
     start_time = time.time()
@@ -75,7 +79,19 @@ def main():
     # Для получения задач и выдачи результата используем очереди
     queue = Queue()
     result_queue = Queue()
-
+    
+    #Delete dupicate
+    print('Removing duplicates...')
+    input = open('domain.txt', 'r')
+    output = open('domains.txt', 'w')
+    linesarray = input.readlines()
+    input.close()
+    seen = []
+    seen = f7(linesarray)
+    for i in range(len(seen)):
+        output.write(seen[i])
+    output.close()
+print('Complete')
     #fr_success = os.path.join(domain_temp, "good.txt")
     #fr_errors  = os.path.join(domain_temp, "error.txt")
 
