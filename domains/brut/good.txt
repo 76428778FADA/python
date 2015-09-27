@@ -43,3 +43,7 @@ admin pass demos1.softaculous.com/WordPress
 Joomla: admin pass tw1ns.mysit.ru
 
 WP: admin 123456 CIZGIFILMTV.NET
+WP: 0 admin 123456 CIZGIFILMTV.NET
+Joomla: 1 admin pass tw1ns.mysit.ru
+WP: 0 admin 123456 CIZGIFILMTV.NET
+Joomla: 1 admin pass tw1ns.mysit.ru

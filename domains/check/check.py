@@ -15,8 +15,7 @@ pbcount = 0
 theard_count = 300
 headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
 domain_file = "domains.txt"
-open('good_wp.txt','w')
-open('good_joo.txt','w')
+open('good.txt','w')
 #domain_temp = ""
 
 
@@ -73,13 +72,13 @@ def run(queue, result_queue):
             #print('WPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWP')
             good_wp = good_wp + 1
             #print(str(good_wp))
-            open('good_wp.txt', 'a+').write(host + '\n')
+            open('good.txt', 'a+').write('0 '+host + '\n')
         else:
             pass
         if status == 3:
             #print('JOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOO')
             good_joo = good_joo + 1
-            open('good_joo.txt', 'a+').write(host + '\n')
+            open('good.txt', 'a+').write('1 '+host + '\n')
         else:
             pass
         #print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
@@ -131,7 +130,7 @@ def main():
         thread.daemon = True
         thread.start()
     queue.join()
-    print(time.time() - start_time)
+    #print(time.time() - start_time)
 
 if __name__ == '__main__':
     main()
