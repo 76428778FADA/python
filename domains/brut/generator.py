@@ -23,15 +23,17 @@ domains.close()
 
 theard_count = 1
 def gen():
-    #t = domains.split('.')
-    #s = t[0]
+#    t = domains.split()
+#    s = t[0]
     for i in range(len(login_list)):
         login = login_list[i].strip()
         for i in range(len(pwd_list)):
             pwd = pwd_list[i].strip()
             for i in range(len(domains_list)):
                 #domains = domains_list
-                open('source.txt', 'a+').write(login+' '+pwd+' '+domains_list[i])
+                t = domains_list[i].split()
+                #print(t[0]+' '+login+' '+pwd+' '+t[1])
+                open('source.txt', 'a+').write(t[0]+' '+login+' '+pwd+' '+t[1]+'\n')
 
 def gen_host():
     for i in range(len(domains_list)):
@@ -49,6 +51,7 @@ def gen_host():
             open('source.txt', 'a+').write(login+' '+pwd+' '+s+'\n')
 
 gen()
+print('Complete...')
 #gen_host()
 '''def run(queue, result_queue):
     # Цикл продолжается пока очередь задач не станет пустой
