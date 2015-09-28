@@ -38,8 +38,4 @@ WP: admin admin PHILIPPINEFIESTA.NET
 WP: admin qwerty ULCER-TREATMENT.NET
 Joomla: admin 123456789 VOROTA24.NET
 
-admin pass demos1.softaculous.com/WordPress
 
-Joomla: admin pass tw1ns.mysit.ru
-
-Joomla: 1 admin pass tw1ns.mysit.ru

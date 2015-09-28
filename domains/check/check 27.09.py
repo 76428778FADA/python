@@ -14,8 +14,9 @@ good_joo = 0
 pbcount = 0
 theard_count = 300
 headers = {'user-agent': 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/41.0.2228.0 Safari/537.36'}
-domain_file = "domains_clear.txt"
-open('domains.txt','w')
+domain_file = "domains.txt"
+open('good_wp.txt','w')
+open('good_joo.txt','w')
 #domain_temp = ""
 
 
@@ -72,13 +73,13 @@ def run(queue, result_queue):
             #print('WPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWPWP')
             good_wp = good_wp + 1
             #print(str(good_wp))
-            open('domains.txt', 'a+').write('0 '+host + '\n')
+            open('good_wp.txt', 'a+').write(host + '\n')
         else:
             pass
         if status == 3:
             #print('JOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOO')
             good_joo = good_joo + 1
-            open('domains.txt', 'a+').write('1 '+host + '\n')
+            open('good_joo.txt', 'a+').write(host + '\n')
         else:
             pass
         #print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
@@ -101,7 +102,7 @@ def main():
     #Delete dupicate
     print('Removing duplicates...')
     input = open('domains_dub.txt', 'r')
-    output = open('domains_clear.txt', 'w')
+    output = open('domains.txt', 'w')
     linesarray = input.readlines()
     #count_line = len(linesarray)
     input.close()
@@ -119,7 +120,7 @@ def main():
     #fr_errors  = os.path.join(domain_temp, "error.txt")
 
     # Сначала загружаем все URL из файла в очередь задач
-    domains_count = len(open('domains_clear.txt', 'r').readlines())
+    domains_count = len(open('domains.txt', 'r').readlines())
     #print(str(domains_count))
     with open(domain_file) as f:	
         for line in f:
@@ -130,8 +131,7 @@ def main():
         thread.daemon = True
         thread.start()
     queue.join()
-    print('Complete...')
-    #print(time.time() - start_time)
+    print(time.time() - start_time)
 
 if __name__ == '__main__':
     main()

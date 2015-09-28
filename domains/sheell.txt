@@ -12,3 +12,6 @@ http://toursys.net/plugins/system/anticopy/anticopy.php
 http://textedeiubire.net/wp-content/themes/twentythirteen/author-bio.php
 193961e0fc38b656ac826ba44c8222a5
 http://callservices.net/plugins/system/anticopy/anticopy.php
+http://partytrain.net/plugins/system/anticopy/anticopy.php
+http://www.auroin.net/wp-content/themes/twentythirteen/author-bio.php
+http://webrains.net/wp-content/themes/twentythirteen/author-bio.php
