@@ -25,7 +25,7 @@ def check_url(host):
     global good_wp
     global good_joo
     pbcount = pbcount + 1
-    sys.stdout.write("\033[0;32m\r%d" %pbcount + " / "+str(domains_count)+' || Good WordPress: ' + str(good_wp) + ' || Good Joomla: ' + str(good_joo))
+    sys.stdout.write("\033[0;32m\r%d" %pbcount + " / "+str(domains_count)+' || WordPress: ' + str(good_wp) + ' || Joomla: ' + str(good_joo))
     sys.stdout.flush()
     url = 'http://'+host+'/wp-login.php'
     try:
