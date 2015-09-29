@@ -56,3 +56,6 @@ Joomla: 1 admin admin BUILDCONGLOBAL.NET
 WP: 0 admin admin SHOPNORTHAMERICA.NET
 WP: 1 admin admin DOMAINSREGISTRIEREN.NET
 Joomla: 1 admin password ALJERID.NET
+WP: 0 admin admin USB3GVN.NET
+WP: 0 admin admin AUTOPISTA.NET
+Joomla: 1 admin admin UTAHHORSEPROPERTIES.NET

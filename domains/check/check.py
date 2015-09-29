@@ -73,14 +73,10 @@ def run(queue, result_queue):
             good_wp = good_wp + 1
             #print(str(good_wp))
             open('domains.txt', 'a+').write('0 '+host + '\n')
-        else:
-            pass
         if status == 3:
             #print('JOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOOJOO')
             good_joo = good_joo + 1
             open('domains.txt', 'a+').write('1 '+host + '\n')
-        else:
-            pass
         #print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
     #print('{} closing'.format(current_thread()))
 # Remove duplicate
