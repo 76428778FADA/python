@@ -38,6 +38,21 @@ WP: admin admin PHILIPPINEFIESTA.NET
 WP: admin qwerty ULCER-TREATMENT.NET
 Joomla: admin 123456789 VOROTA24.NET
 
-
 WP: 0 admin pass RAGS2RICHES.NET
 WP: 0 admin 12345678 BTICX.NET
+Joomla: 1 admin pass XN--80AT0AX.NET
+WP: 0 admin pass R3STATS.NET
+WP: 0 admin 123456 QUANGCAOSO.NET
+WP: 0 admin 123456 EMREAKKAS.NET
+Joomla: 1 admin 123456 DELTAELEVATOR.NET
+Joomla: 1 admin admin ELAHORRADOR.NET
+WP: 0 admin admin ROWADCO.NET
+Joomla: 1 admin admin HUONGSENSPA.NET
+WP: 0 admin pass MAGICJOEY.NET
+Joomla: 1 admin 12345 SREEPRAI.NET
+Joomla: 1 admin admin HOME-INCUBATOR.NET
+Joomla: 0 admin admin KOZYATAGINAKLIYAT.NET
+Joomla: 1 admin admin BUILDCONGLOBAL.NET
+WP: 0 admin admin SHOPNORTHAMERICA.NET
+WP: 1 admin admin DOMAINSREGISTRIEREN.NET
+Joomla: 1 admin password ALJERID.NET
