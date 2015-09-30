@@ -29,26 +29,26 @@ def check_url(host):
     sys.stdout.flush()
     url = 'http://'+host+'/wp-login.php'
     try:
-        response = requests.get(url, timeout=10, headers=headers)
+        response = requests.get(url, timeout=5, headers=headers)
     except Exception:
         return False
     else:
-        if response.status_code == 200:
-            if response.text.find('wp-admin')>0:
-                return 2
+        #if response.status_code == 200:
+        if response.text.find('wp-admin')>0:
+            return 2
             #else:
                 #return False       
         #else:
             #return False
-    url1 = 'http://'+host+'/administrator/index.php'
+    url = 'http://'+host+'/administrator/index.php'
     try:
-        response1 = requests.get(url1, timeout=10, headers=headers)
+        response = requests.get(url, timeout=5, headers=headers)
     except Exception:
         return False
     else:
-        if response1.status_code == 200:
-            if response1.text.find('loginform')>0:
-                return 3
+        #if response.status_code == 200:
+        if response.text.find('loginform')>0:
+            return 3
             #else:
                 #return False       
         #else:

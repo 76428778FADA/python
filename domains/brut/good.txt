@@ -37,25 +37,29 @@ WP: admin pass IBAPP.NET
 WP: admin admin PHILIPPINEFIESTA.NET
 WP: admin qwerty ULCER-TREATMENT.NET
 Joomla: admin 123456789 VOROTA24.NET
-
+Joomla: 1 admin admin ELAHORRADOR.NET
+Joomla: 1 admin 123456 DELTAELEVATOR.NET
+Joomla: 1 admin admin HUONGSENSPA.NET
+-----------------------------------------
 WP: 0 admin pass RAGS2RICHES.NET
 WP: 0 admin 12345678 BTICX.NET
-Joomla: 1 admin pass XN--80AT0AX.NET
 WP: 0 admin pass R3STATS.NET
 WP: 0 admin 123456 QUANGCAOSO.NET
 WP: 0 admin 123456 EMREAKKAS.NET
-Joomla: 1 admin 123456 DELTAELEVATOR.NET
-Joomla: 1 admin admin ELAHORRADOR.NET
 WP: 0 admin admin ROWADCO.NET
-Joomla: 1 admin admin HUONGSENSPA.NET
 WP: 0 admin pass MAGICJOEY.NET
-Joomla: 1 admin 12345 SREEPRAI.NET
-Joomla: 1 admin admin HOME-INCUBATOR.NET
-Joomla: 0 admin admin KOZYATAGINAKLIYAT.NET
-Joomla: 1 admin admin BUILDCONGLOBAL.NET
 WP: 0 admin admin SHOPNORTHAMERICA.NET
 WP: 1 admin admin DOMAINSREGISTRIEREN.NET
-Joomla: 1 admin password ALJERID.NET
 WP: 0 admin admin USB3GVN.NET
 WP: 0 admin admin AUTOPISTA.NET
-Joomla: 1 admin admin UTAHHORSEPROPERTIES.NET
+WP: 0 admin pass ADVERTDESIGN.NET
+WP: 0 admin pass HOSTINGTOTAL.NET
+WP: 0 admin admin SYIFA.NET
+WP: 0 admin pass KOSHEVOY.NET
+WP: 0 admin 12345 KOSHEVOY.NET
+WP: 0 admin 12345 YUMEIMISE.NET
+WP: 0 admin 12345 TECHIES.NET
+WP: 0 admin 1234 KOSHEVOY.NET
+WP: 0 admin 123456 WSOPTR.NET
+WP: 0 admin 123456 TUIXACHSAIGON.NET
+WP: 0 admin 123456 TINTHETHAO24H.NET
