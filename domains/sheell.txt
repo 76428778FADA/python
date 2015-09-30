@@ -23,5 +23,6 @@ http://buildconglobal.net/plugins/system/anticopy/anticopy.php
 http://home-incubator.net/plugins/system/anticopy/anticopy.php
 9cc9b6c852ae96f71dbdeb154bdaf676
 http://fun360.net/plugins/system/anticopy/anticopy.php
+http://dowsa.net/plugins/system/anticopy/anticopy.php
 
 
