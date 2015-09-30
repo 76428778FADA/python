@@ -40,19 +40,14 @@ Joomla: admin 123456789 VOROTA24.NET
 Joomla: 1 admin admin ELAHORRADOR.NET
 Joomla: 1 admin 123456 DELTAELEVATOR.NET
 Joomla: 1 admin admin HUONGSENSPA.NET
+WP: 0 admin pass ADVERTDESIGN.NET
 -----------------------------------------
-WP: 0 admin pass RAGS2RICHES.NET
-WP: 0 admin 12345678 BTICX.NET
 WP: 0 admin pass R3STATS.NET
 WP: 0 admin 123456 QUANGCAOSO.NET
 WP: 0 admin 123456 EMREAKKAS.NET
-WP: 0 admin admin ROWADCO.NET
-WP: 0 admin pass MAGICJOEY.NET
-WP: 0 admin admin SHOPNORTHAMERICA.NET
-WP: 1 admin admin DOMAINSREGISTRIEREN.NET
-WP: 0 admin admin USB3GVN.NET
+
 WP: 0 admin admin AUTOPISTA.NET
-WP: 0 admin pass ADVERTDESIGN.NET
+
 WP: 0 admin pass HOSTINGTOTAL.NET
 WP: 0 admin admin SYIFA.NET
 WP: 0 admin pass KOSHEVOY.NET
@@ -60,7 +55,9 @@ WP: 0 admin 12345 KOSHEVOY.NET
 WP: 0 admin 12345 YUMEIMISE.NET
 WP: 0 admin 12345 TECHIES.NET
 WP: 0 admin 1234 KOSHEVOY.NET
-WP: 0 admin 123456 WSOPTR.NET
 WP: 0 admin 123456 TUIXACHSAIGON.NET
 WP: 0 admin 123456 TINTHETHAO24H.NET
 WP: 0 admin admin KOSHEVOY.NET
+WP: 0 admin admin VIETTAM.NET
+WP: 0 admin qwerty KOSHEVOY.NET
+WP: 0 admin 12345678 KOSHEVOY.NET

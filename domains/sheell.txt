@@ -24,5 +24,10 @@ http://home-incubator.net/plugins/system/anticopy/anticopy.php
 9cc9b6c852ae96f71dbdeb154bdaf676
 http://fun360.net/plugins/system/anticopy/anticopy.php
 http://dowsa.net/plugins/system/anticopy/anticopy.php
-
+http://wsoptr.net/wp-content/themes/betobo/comments.php
+http://www.rowadco.net/wp-content/themes/twentythirteen/author-bio.php
+http://tamsart.net/plugins/system/anticopy/anticopy.php
+http://usb3gvn.net/wp-content/themes/venedor/comments.php
+http://rags2riches.net/wp-content/themes/twentythirteen/author-bio.php
+http://www.bticx.net/wp-content/themes/twentythirteen/author-bio.php
 
