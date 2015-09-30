@@ -30,4 +30,11 @@ http://tamsart.net/plugins/system/anticopy/anticopy.php
 http://usb3gvn.net/wp-content/themes/venedor/comments.php
 http://rags2riches.net/wp-content/themes/twentythirteen/author-bio.php
 http://www.bticx.net/wp-content/themes/twentythirteen/author-bio.php
-
+http://www.autopista.net/wp-content/themes/twentythirteen/author-bio.php
+http://r3stats.net/wp-content/themes/twentythirteen/author-bio.php
+http://syifa.net/wp-content/themes/twentythirteen/author-bio.php
+http://nicefine.net/wp-content/themes/default/comments.php
+http://techies.net/wp-content/themes/twentythirteen/author-bio.php
+http://yumeimise.net/wp-content/themes/twentythirteen/author-bio.php
+http://tuixachsaigon.net/wp-content/themes/twentyfifteen/author-bio.php
+http://tinthethao24h.net/wp-content/themes/sahifa/functions/updates.php
