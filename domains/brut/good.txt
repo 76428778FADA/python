@@ -49,8 +49,6 @@ WP: 0 admin admin THECRESCENDO.NET
 WP: 0 admin pass PLASTIXPORTAL.NET
 WP: 0 admin admin GALAXY-LABS.NET
 WP: 0 admin 123456789 CIZMEDECAUCIUC.NET
------------------------------------------
-WP: 0 admin 12345 GROWTALLERPRODUCTS.NET
-WP: 0 admin 123456 NEWSGEAR.NET
-WP: 0 admin 123456 K9CLIPS.NET
 WP: 0 admin admin KURSATOZDEMIR.NET
+-----------------------------------------
+
