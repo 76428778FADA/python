@@ -80,10 +80,10 @@ def run(queue, result_queue):
         #print('{} finished in thread {}. Result={}'.format(host, current_thread(), status))
     #print('{} closing'.format(current_thread()))
 # Remove duplicate
-def f7(seq):
+'''def f7(seq):
     seen = set()
     seen_add = seen.add
-    return [ x for x in seq if not (x in seen or seen_add(x))]
+    return [ x for x in seq if not (x in seen or seen_add(x))]'''
     
 # MAIN
 def main():
@@ -94,7 +94,7 @@ def main():
     queue = Queue()
     result_queue = Queue()
    
-    #Delete dupicate
+    '''#Delete dupicate
     print('Removing duplicates...')
     input = open('domains_dub.txt', 'r')
     output = open('domains_clear.txt', 'w')
@@ -110,7 +110,7 @@ def main():
         output.write(seen[i])
     output.close()
     #bar.finish()
-    print('Complete')
+    print('Complete')'''
     #fr_success = os.path.join(domain_temp, "good.txt")
     #fr_errors  = os.path.join(domain_temp, "error.txt")
 
@@ -126,7 +126,7 @@ def main():
         thread.daemon = True
         thread.start()
     queue.join()
-    print('Complete...')
+    print('/n Complete...')
     #print(time.time() - start_time)
 
 if __name__ == '__main__':
