@@ -8,6 +8,6 @@ for i in range(len(seen)):
     url = seen[i].split('/')
     print(url[2])
     #print(url[0]+'/'+url[1]+'/'+url[2])
-    output.write(seen[i])
+    output.write(url[0]+'/'+url[1]+'/'+url[2]+'\n')
 output.close()
 print('Complete')

@@ -1,7 +1,5 @@
-79be1a68c5e5f2a9b58e6acc2fdbe1b8
 http://mitranova.net/wp-content/themes/twentythirteen/author-bio.php
 http://букет-казань.рф/wp-content/themes/twentythirteen/author-bio.php
-149b7e0a72ad29889424e8028124224e
 http://healthace.net/wp-content/themes/twentythirteen/author-bio.php
 http://www.almanya-egitim.net/wp-content/themes/twentytwelve/tag.php
 http://tieudungthongthai.net/wp-content/themes/twentythirteen/author-bio.php
@@ -10,7 +8,6 @@ http://radosh-style.net/wp-content/themes/twentyfifteen/author-bio.php
 http://jarralrajput.net/templates/beez3/component.php
 http://toursys.net/plugins/system/anticopy/anticopy.php
 http://textedeiubire.net/wp-content/themes/twentythirteen/author-bio.php
-193961e0fc38b656ac826ba44c8222a5
 http://щука.net/plugins/system/anticopy/anticopy.php
 http://callservices.net/plugins/system/anticopy/anticopy.php
 http://partytrain.net/plugins/system/anticopy/anticopy.php
@@ -21,7 +18,6 @@ http://aljerid.net/plugins/system/anticopy/anticopy.php
 http://sreeprai.net/plugins/system/anticopy/anticopy.php
 http://buildconglobal.net/plugins/system/anticopy/anticopy.php
 http://home-incubator.net/plugins/system/anticopy/anticopy.php
-9cc9b6c852ae96f71dbdeb154bdaf676
 http://fun360.net/plugins/system/anticopy/anticopy.php
 http://dowsa.net/plugins/system/anticopy/anticopy.php
 http://wsoptr.net/wp-content/themes/betobo/comments.php

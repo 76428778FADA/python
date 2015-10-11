@@ -1,28 +1,25 @@
-admin 123456 XN-----DLCJEKHDPRU3A3ABAP5L.XN--P1AI
-admin 123456 XN----8SBAAC4BELMO9CKMZ7B.XN--P1AI
-admin 12345 XN----8SBAZBCBBVDMO9E.XN--P1AI
-admin admin XN----7SBBI0BEENFC1BE4P.XN--P1AI
-admin 12345 XN-----6KCFLBEE9AN5AGGEABBSN4AEVC.XN--P1AI
-admin admin XN----7SBGDKC7CJKQDHBR7A.XN--P1AI
-admin admin XN----7SBBILADZPFXQX5HD.XN--P1AI
-admin 12345 XN----8SBPUDPHV0C.XN--P1AI
-admin 12345 AVERSS.SU
-admin admin XN-----6KCBEIIHHFTIZH1AXQVJ5B6S.XN--P1AI
-admin admin XN----7SBBIHFCAW9ACD6BIHR2D9H.XN--P1AI
-admin admin XN----7SBBP6AIEECFE0RG.XN--P1AI
-admin 12345 XN----8SBPDHL0AKUII9B0DG.SU
-admin 123456 MIKROZAEM.SU
-admin admin XN----7SBFZBAIU7ABUE6GXAC.XN--P1AI
-admin 123456 XN-----6KCABVC8AA0BFCLIUJSA5A1V.XN--P1AI
-admin 1234 XN----8SBNJLCS7BPA1H.XN--P1AI
-admin 12345 XN----7SBHHUXDNRT5D.XN--P1AI
-admin 12345 XN----CTB1AFJRH8F.XN--P1AI
-admin 123456 XN----8SBALVBFZCPB4I.XN--P1AI
-admin admin XN-----6KCNHCBRGBFGLHDOMCXBH0AH4AEFI4H1B4G3A0G.XN--P1AI
-admin admin XN----7SBGZOQYDF.XN--P1AI
-admin admin XN-----6KCABBGNODBOW3AIDGJOCZB0BH5ADHI6B2D7B4J6DP.XN--P1AI
+admin 123456 XN-----DLCJEKHDPRU3A3ABAP5L.XN--P1AI/wp-login.php
+admin 123456 XN----8SBAAC4BELMO9CKMZ7B.XN--P1AI/wp-login.php
+admin 12345 XN----8SBAZBCBBVDMO9E.XN--P1AI/wp-login.php
+admin admin XN----7SBBI0BEENFC1BE4P.XN--P1AI/wp-login.php
+admin 12345 XN-----6KCFLBEE9AN5AGGEABBSN4AEVC.XN--P1AI/wp-login.php
+admin admin XN----7SBGDKC7CJKQDHBR7A.XN--P1AI/wp-login.php
+admin admin XN----7SBBILADZPFXQX5HD.XN--P1AI/wp-login.php
+admin 12345 XN----8SBPUDPHV0C.XN--P1AI/wp-login.php
+admin 12345 AVERSS.SU/wp-login.php
+admin admin XN-----6KCBEIIHHFTIZH1AXQVJ5B6S.XN--P1AI/wp-login.php
+admin admin XN----7SBBIHFCAW9ACD6BIHR2D9H.XN--P1AI/wp-login.php
+admin admin XN----7SBBP6AIEECFE0RG.XN--P1AI/wp-login.php
+admin 12345 XN----8SBPDHL0AKUII9B0DG.SU/wp-login.php
+admin 123456 MIKROZAEM.SU/wp-login.php
+admin admin XN----7SBFZBAIU7ABUE6GXAC.XN--P1AI/wp-login.php
+admin 123456 XN-----6KCABVC8AA0BFCLIUJSA5A1V.XN--P1AI/wp-login.php
+admin 1234 XN----8SBNJLCS7BPA1H.XN--P1AI/wp-login.php
+
+
 
 not work
+admin admin XN-----6KCABBGNODBOW3AIDGJOCZB0BH5ADHI6B2D7B4J6DP.XN--P1AI/wp-login.php
 admin admin IT-DOMAIN.NET
 admin admin DOTCOMACADEMY.NET
 admin 123123 DIAGONALFLYING.NET
@@ -71,51 +68,19 @@ WP: 0 admin 123456789 ETRADES.NET
 0 admin admin ROYALEWITHCHEESE.NET/wp-login.php
 1 admin qwerty PAYAMOZAFAR.NET/administrator/index.php
 1 admin admin NEWS-MO.NET/administrator/index.php
------------------------------------------
-
-0 admin 123456789 SAFETYSIPHON.NET/wp-login.php
 0 admin 123456789 MODAMAGAZIN.NET/wp-login.php
-0 admin 123456789 WEBYPC.NET/wp-login.php
 0 admin 123456789 DEFAGROUP.NET/wp-login.php
-0 admin 123456789 LOTTERYMEGAMILLIONS.NET/wp-login.php
-0 admin 123456789 WATCHESLAN.NET/wp-login.php
-0 admin password CONNOLLYINSURANCE.NET/wp-login.php
-0 admin password FILMSTATE.NET/wp-login.php
-0 admin password DOCTRACER.NET/wp-login.php
-0 admin password STOREPHILIPPINES.NET/wp-login.php
-0 admin password WIKILEAKSTURKCE.NET/wp-login.php
-0 admin 123123 AIRCONDITIONERPRICES.NET/wp-login.php
-0 admin 123123 CARMENAMATO.NET/wp-login.php
-1 admin 123123 KURTTARIM.NET/administrator/index.php
-0 admin 123123 ALMANARAPS.NET/wp-login.php
-0 admin 123123 AVAGAN.NET/wp-login.php
-0 admin 123123 BAILBONDHOUSTON.NET/wp-login.php
-0 admin 123123 TOLIKE.NET/wp-login.php
-0 admin 123123123 APDAILA.NET/wp-login.php
-0 admin administrator PRIVATEMEMBER.NET/wp-login.php
-
-0 admin pass ankenyjaycees.org/wp-login.php
-0 admin pass anotheropinion.org/wp-login.php
-0 admin pass autismbehaviorservices.org/wp-login.php
-0 admin pass automatedlife.org/wp-login.php
-0 admin pass avot.org/wp-login.php
-0 admin 123456 60sff.org/wp-login.php
-0 admin 123456 ashonng.org/wp-login.php
-0 admin 123456 aulavirtualivp.org/wp-login.php
-0 admin admin adranepal.org/wp-login.php
-0 admin admin alareeg.org/wp-login.php
-1 admin admin albatoulhospital.org/administrator/index.php
+0 admin 123456 60sff.org/wp-login.php tic10
 1 admin admin allmecenat.org/administrator/index.php
-0 admin admin appfe.org/wp-login.php
-0 admin admin archeologia.org/wp-login.php
-0 admin admin asiannewsnetwork.org/wp-login.php
+1 admin 1234567 americanwriting.org/administrator/index.php
 1 admin admin atmagodda.org/administrator/index.php
+1 admin 123123 KURTTARIM.NET/administrator/index.php
 0 admin admin attasami.org/wp-login.php
 0 admin admin avteg.org/wp-login.php
-0 admin admin awesomedog.org/wp-login.php
-0 admin admin baselcert.org/wp-login.php
-1 admin admin bayauddocumentservices.org/administrator/index.php
-1 admin admin bcs85forumbd.org/administrator/index.php
-0 admin 1234567 alcohol-abuse-help.org/wp-login.php
-1 admin 1234567 americanwriting.org/administrator/index.php
-1 admin password asiafashionfederation.org/administrator/index.php
+0 admin admin appfe.org/wp-login.php
+0 admin pass cloggedpores.org/wp-login.php
+-----------------------------------------
+
+0 admin pass businessmachine.org/wp-login.php
+0 admin pass candidatest.org/wp-login.php
+1 admin pass cddfafrica.org/administrator/index.php
