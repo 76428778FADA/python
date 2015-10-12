@@ -79,8 +79,14 @@ WP: 0 admin 123456789 ETRADES.NET
 0 admin admin avteg.org/wp-login.php
 0 admin admin appfe.org/wp-login.php
 0 admin pass cloggedpores.org/wp-login.php
+1 admin 123456 ciedev.org/administrator/index.php
+1 admin 123456 bursalazerepilasyon.org/administrator/index.php
+1 admin 123456 bestessaysite.org/administrator/index.php
+1 admin admin cirdac.org/administrator/index.php
+0 admin pass candidatest.org/wp-login.php
+0 admin admin bluebellschool.org/wp-login.php
+0 admin password btlbsmrau.org/wp-login.php
 -----------------------------------------
 
-0 admin pass businessmachine.org/wp-login.php
-0 admin pass candidatest.org/wp-login.php
-1 admin pass cddfafrica.org/administrator/index.php
+
+0 admin 123123123 citizenspeaknow.org/wp-login.php
