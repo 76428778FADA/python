@@ -90,3 +90,6 @@ WP: 0 admin 123456789 ETRADES.NET
 
 
 0 admin 123123123 citizenspeaknow.org/wp-login.php
+0 admin 123123123 chengxu.org/wp-login.php
+0 admin administrator citizenspeaknow.org/wp-login.php
+0 admin administrator ciudadanosdeverdad.org/wp-login.php
