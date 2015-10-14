@@ -136,5 +136,13 @@ http://miivoc.org/plugins/system/anticopy/anticopy.php
 http://hcf-ug.org/plugins/system/anticopy/anticopy.php
 http://laughterlines.org/plugins/system/anticopy/anticopy.php
 http://om-la.org/templates/beez3/component.php
+http://thermalnetwork.org/wp-content/themes/twentythirteen/author-bio.php
+http://www.tiffanyuksilver.org/wp-content/themes/twentythirteen/author-bio.php
+
+
+
+
+
+
 
 
