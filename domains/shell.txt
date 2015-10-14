@@ -120,6 +120,7 @@ http://paanimusic.org/plugins/system/anticopy/anticopy.php
 http://proyectoazul.org/plugins/system/anticopy/anticopy.php
 http://tdmonolit.org/plugins/system/anticopy/anticopy.php
 http://camcanng.org/plugins/system/anticopy/anticopy.php
+
 http://ibfmasaya.org/plugins/system/anticopy/anticopy.php
 http://cddfafrica.org/plugins/system/anticopy/anticopy.php
 http://omrmz.org/plugins/system/anticopy/anticopy.php
@@ -130,6 +131,7 @@ http://hapiafricang.org/plugins/system/anticopy/anticopy.php
 http://www.kashin-med.org/plugins/system/anticopy/anticopy.php
 http://martirdecuilapan.org/plugins/system/anticopy/anticopy.php
 http://mattel.org/plugins/system/anticopy/anticopy.php
+
 http://mbcdallas.org/plugins/system/anticopy/anticopy.php
 http://moig.org/plugins/system/anticopy/anticopy.php
 http://miivoc.org/plugins/system/anticopy/anticopy.php
@@ -138,10 +140,30 @@ http://laughterlines.org/plugins/system/anticopy/anticopy.php
 http://om-la.org/templates/beez3/component.php
 http://thermalnetwork.org/wp-content/themes/twentythirteen/author-bio.php
 http://www.tiffanyuksilver.org/wp-content/themes/twentythirteen/author-bio.php
+http://bluffpark.org/wp-content/themes/twentythirteen/author.php
+http://bestinternationalmovers.org/wp-content/themes/twentythirteen/archive.php
 
+http://truevinewomen.org/wp-content/themes/twentythirteen/comments.php
+http://vamosguatemala.org/wp-content/themes/twentythirteen/comments.php
+http://pin-inc.org/wp-content/themes/twentythirteen/comments.php
+http://hopeforallministries.org/wp-content/themes/twentythirteen/comments.php
+http://www.philippinecommons.org/wp-content/themes/twentythirteen/author-bio.php
+http://klimauredjaji.org/wp-content/themes/twentythirteen/author-bio.php
+http://www.michigandentalimplants.org/wp-content/themes/twentythirteen/author-bio.php
+http://tejasfoundation.org/wp-content/themes/twentythirteen/author-bio.php
+http://thevirginquest.org/wp-content/themes/twentythirteen/author-bio.php
+http://www.usmovies.org/wp-content/themes/twentythirteen/author-bio.php
 
-
-
+http://thekerryfund.org/wp-content/themes/twentythirteen/author-bio.php
+http://popup-usa.org/wp-content/themes/twentythirteen/comments.php
+http://perdatin.org/wp-content/themes/twentythirteen/comments.php
+http://pureheartsrus.org/wp-content/themes/twentythirteen/comments.php
+http://prasthangroup.org/wp-content/themes/twentythirteen/author-bio.php
+http://parkashenterprises.org/wp-content/themes/twentyten/comments.php
+http://humanrightsdigest.org/wp-content/themes/twentythirteen/comments.php
+http://www.hhsoconcertocompetition.org/wp-content/themes/twentythirteen/author-bio.php
+http://www.ledstriplight.org/wp-content/themes/twentythirteen/author-bio.php
+http://ledt5.org/wp-content/themes/twentythirteen/author-bio.php
 
 
 
