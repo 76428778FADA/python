@@ -137,29 +137,13 @@ WP: 0 admin 123456789 ETRADES.NET
 0 admin 123456 migrantscenter.org/wp-login.php
 0 admin 123456 hotmoney.org/wp-login.php
 0 admin admin mer-warchild.org/wp-login.php
+0 admin admin infopressecom.org/wp-login.php
+0 admin admin lompocmasons.org/wp-login.php
+0 admin qwerty homeswithcare.org/wp-login.php
+0 admin 123123 maricopaveteranscenter.org/wp-login.php
+0 admin 123456 benhlau.org/wp-login.php
 -----------------------------------------
 
-0 admin admin lompocmasons.org/wp-login.php
-0 admin admin healgrief.org/wp-login.php
-0 admin admin healthfuleating.org/wp-login.php
-0 admin admin hospicemusictherapy.org/administrator/index.php
-0 admin admin icl-ltd.org/wp-login.php
-0 admin admin ijabbd.org/wp-login.php
-0 admin admin infopressecom.org/wp-login.php
-0 admin admin jaymaadi.org/wp-login.php
 
-0 admin qwerty nasconline.org/wp-login.php
-0 admin qwerty homeswithcare.org/wp-login.php
-0 admin 123456789 innohealthed.org/wp-login.php
-0 admin 123456789 insideoutdetroit.org/wp-login.php
-0 admin password neltp.org/wp-login.php
-0 admin password healgrief.org/wp-login.php
-0 admin password healthfirst.org/wp-login.php
-0 admin 123123 mobaphr.org/wp-login.php
-0 admin 123123 maricopaveteranscenter.org/wp-login.php
-0 admin 123123 maronitedt.org/wp-login.php
-0 admin 123123 healgrief.org/wp-login.php
-0 admin 123123 i58projects.org/wp-login.php
-0 admin 123456 benhlau.org/wp-login.php
 0 admin admin bimskol.org/wp-login.php
 0 admin admin bongamandyoumbilawfirm.org/wp-login.php

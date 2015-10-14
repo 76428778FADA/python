@@ -183,3 +183,9 @@ http://lifeshinefoundation.org/wp-content/themes/twentythirteen/author-bio.php
 http://www.nrntanzania.org/wp-content/themes/twentythirteen/author-bio.php
 http://nomeacaoja.org/wp-content/themes/vantage/comments.php
 http://gurukulam.org/wp-content/themes/twentythirteen/comments.php
+http://ijabbd.org/wp-content/themes/twentythirteen/comments.php
+http://www.icl-ltd.org/wp-content/themes/twentyeleven/comments.php
+http://innohealthed.org/wp-content/themes/twentyeleven/comments.php
+
+http://bimskol.org/wp-content/themes/twentythirteen/author-bio.php
+
