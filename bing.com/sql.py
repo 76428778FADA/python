@@ -23,15 +23,16 @@ import string
 file = open('sqlerr.txt' , 'r')
 err_list = file.readlines()
 file.close()
-print' ______________________________________'
-print'|                                      |'
-print'|  Parser dork from                    |' 
-print'|      _                               |'
-print'|     |_) o ._   _     _  _  ._ _      |'
-print'|     |_) | | | (_| o (_ (_) | | |     |'
-print'|                _|                    |'
-print'|                v.2.1                 |'
-print'|______________________________________|'
+print(' ______________________________________')
+print('|                                      |')
+print('|  Parser dork from                    |')
+print('|      _                               |')
+print('|     |_) o ._   _     _  _  ._ _      |')
+print('|     |_) | | | (_| o (_ (_) | | |     |')
+print('|                _|                    |')
+print('|                                      |')
+print('|                v.2.1                 |')
+print('|______________________________________|')
 print
 #--------------------------------------------------------------
 file = open('url_pars.txt', 'w')
@@ -43,39 +44,40 @@ dorks = open('dorks.txt' , 'r')
 dorks_list = dorks.readlines()
 dorks.close()
 #--------------------------------------------------------------
-pages = int(raw_input('Number of page: '))*10
-#pages = 10
+pages = int(input('Number of page: '))*10
+#print(pages)
+print('Number of dorks: '+str(len(dorks_list)))
+#pages = 50
 for i in range(len(dorks_list)):
     search = dorks_list[i].strip()
-    #print 'Number of dorks: '+str(len(dorks_list))
-    print 'Use dork: '+search
+    print('Use dork: '+search)
     count = 1
     while (count < pages):
 #http://www.bing.com/search?q=index.php?id=&go=&filt=all&first=1&FORM=PERE3
-	req = ('http://www.bing.com/search?q=' + search + '&first='+str(count))
-	try:	
-	    response = requests.get(req)
-	except:
-	    print 'Error get bing.com'
+        req = ('http://www.bing.com/search?q=' + search + '&first='+str(count))
+        try:	
+            response = requests.get(req)
+        except:
+            print('Error get bing.com')
 	#print response.text	
-	req = ''	
-	try:
-	    link = re.findall('<h2><a href="(.+?)"', response.text, re.DOTALL)
-	    for i in range(len(link)):
+        req = ''	
+        try:
+            link = re.findall('<h2><a href="(.+?)"', response.text, re.DOTALL)
+            for i in range(len(link)):
 		#print link[i]
 		#if link[i].find('yandex'):
 		#	print 'YANDEX'
 		#else:
-	        if link[i].find('http://bs.yandex.ru'):
-		    print 'url: '+link[i]	
-		    open('url_pars.txt', 'a+').write(link[i] +'\'' + '\n')
+                if link[i].find('http://bs.yandex.ru'):
+                    #print('url: '+link[i])	
+                    open('url_pars.txt', 'a+').write(link[i] +'\'' + '\n')
 		#else:
 		    #print 'ya'
 		#count = count+10
 		#print count
-	except:
-	    print 'Error parsing url'
-	count = count+10
+        except:
+            print('Error parsing url')
+        count = count+10
 	#print count
 #---------------------Delete duplicates-------------------------
 def f7(seq):
@@ -83,14 +85,14 @@ def f7(seq):
     seen_add = seen.add
     return [ x for x in seq if not (x in seen or seen_add(x))]
 
-print 'Removing duplicates...'
+print('Removing duplicates...')
 input = open('url_pars.txt', 'r')
 output = open('url.txt', 'w')
 linesarray = input.readlines()
 input.close()
 seen = []
 seen = f7(linesarray)
-print(seen)
+#print(seen)
 for i in range(len(seen)):
     output.write(seen[i])
 '''linesarray = input.readlines()
@@ -106,8 +108,8 @@ for i in range(len(linesarray)):
 	
 #os.remove('url_pars.txt')
 output.close()
-print 'Complete'
-print 'Checking error...'
+print('Complete')
+print('Checking error...')
 #-------------------------url.txt--------------------------------
 file = open('url_pars.txt' , 'r')
 url_list = file.readlines()
@@ -116,24 +118,21 @@ file.close()
 err_page = 0
 good_page = 0
 for i in range(len(url_list)):
-        page = url_list[i].strip()
-	print page
-        try:
-		responce = requests.get(page)
-        except Exception, e:
-                err_page = err_page+1
-        else:
-                for i in range(len(err_list)):
-                        err = str(err_list[i])
-			err = err.strip()			
-                        if responce.text.find(err)>0:
-                                print 'FIND "'+err+'" in '+page
-                                open('good.txt', 'a+').write(page + '\n')
-				good_page = good_page + 1
-                #else:
-                        #print ''
+    page = url_list[i].strip()
+    #print(page)
+    try:
+        responce = requests.get(page)
+    except:
+        err_page = err_page+1
+    else:
+        for i in range(len(err_list)):
+            err = str(err_list[i])
+        err = err.strip()			
+        if responce.text.find(err)>0:
+            print('FIND "'+err+'" in '+page)
+            open('good.txt', 'a+').write(page + '\n')
+            good_page = good_page + 1
 #-------------------------------------------------------------------
-print 'Good pages: '+str(good_page)
-print '404,403 pages: '+str(err_page)
-print 'Complete. Press any key...'
-raw_input()
+print('Good pages: '+str(good_page))
+print('404,403 pages: '+str(err_page))
+print('Complete. Press any key...')
