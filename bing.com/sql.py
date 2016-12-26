@@ -32,8 +32,16 @@ print('|     |_) | | | (_| o (_ (_) | | |     |')
 print('|                _|                    |')
 print('|                                      |')
 print('|                v.2.1                 |')
+print('|                           famgor(c)  |')
 print('|______________________________________|')
 print
+#--------------------------------------------------------------
+def check_404(url):
+    rsp = requests.get(url)
+    if (rsp.status_code == 200):
+        return 1
+    else:
+        return 0
 #--------------------------------------------------------------
 file = open('url_pars.txt', 'w')
 file.close()
@@ -44,13 +52,13 @@ dorks = open('dorks.txt' , 'r')
 dorks_list = dorks.readlines()
 dorks.close()
 #--------------------------------------------------------------
-pages = int(input('Number of page: '))*10
+#pages = int(input('Input number of page: '))*10
 #print(pages)
 print('Number of dorks: '+str(len(dorks_list)))
-#pages = 50
+pages = 40
 for i in range(len(dorks_list)):
     search = dorks_list[i].strip()
-    print('Use dork: '+search)
+    #print('Use dork: '+search)
     count = 1
     while (count < pages):
 #http://www.bing.com/search?q=index.php?id=&go=&filt=all&first=1&FORM=PERE3
@@ -64,7 +72,7 @@ for i in range(len(dorks_list)):
         try:
             link = re.findall('<h2><a href="(.+?)"', response.text, re.DOTALL)
             for i in range(len(link)):
-		#print link[i]
+                print(link[i])
 		#if link[i].find('yandex'):
 		#	print 'YANDEX'
 		#else:
@@ -78,13 +86,12 @@ for i in range(len(dorks_list)):
         except:
             print('Error parsing url')
         count = count+10
-	#print count
+    #print(count)
 #---------------------Delete duplicates-------------------------
 def f7(seq):
     seen = set()
     seen_add = seen.add
     return [ x for x in seq if not (x in seen or seen_add(x))]
-
 print('Removing duplicates...')
 input = open('url_pars.txt', 'r')
 output = open('url.txt', 'w')
@@ -121,7 +128,9 @@ for i in range(len(url_list)):
     page = url_list[i].strip()
     #print(page)
     try:
+        #if (check_404(page))==1:
         responce = requests.get(page)
+        #else: break
     except:
         err_page = err_page+1
     else:
