@@ -130,7 +130,7 @@ for i in range(len(url_list)):
     #print(page)
     try:
         #if (check_404(page))==1:
-        response = requests.get(page)
+        response = requests.get(page, timeout = 10)
         #print(response.status_code)
         #else: break
     except:
