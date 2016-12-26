@@ -55,7 +55,7 @@ dorks.close()
 #pages = int(input('Input number of page: '))*10
 #print(pages)
 print('Number of dorks: '+str(len(dorks_list)))
-pages = 40
+pages = 10
 for i in range(len(dorks_list)):
     search = dorks_list[i].strip()
     #print('Use dork: '+search)
@@ -113,12 +113,12 @@ for i in range(len(linesarray)):
         #else:
 		#print 'ya'
 	
-#os.remove('url_pars.txt')
+os.remove('url_pars.txt')
 output.close()
 print('Complete')
 print('Checking error...')
 #-------------------------url.txt--------------------------------
-file = open('url_pars.txt' , 'r')
+file = open('url.txt' , 'r')
 url_list = file.readlines()
 file.close()
 #------------------------Proverka--------------------------------
@@ -133,14 +133,14 @@ for i in range(len(url_list)):
         #else: break
     except:
         err_page = err_page+1
-    else:
-        for i in range(len(err_list)):
+    #else:
+    for i in range(len(err_list)):
             err = str(err_list[i])
-        err = err.strip()			
-        if responce.text.find(err)>0:
-            print('FIND "'+err+'" in '+page)
-            open('good.txt', 'a+').write(page + '\n')
-            good_page = good_page + 1
+            err = err.strip()			
+            if responce.text.find(err)>0:
+                print('FIND "'+err+'" in '+page)
+                open('good.txt', 'a+').write(page + '\n')
+                good_page = good_page + 1
 #-------------------------------------------------------------------
 print('Good pages: '+str(good_page))
 print('404,403 pages: '+str(err_page))
