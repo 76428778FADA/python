@@ -48,7 +48,7 @@ file.close()
 #search = raw_input('Text of dork (example:index.php?id=):')
 #search = 'post.php?id='
 #------------------Dorks list----------------------------------
-dorks = open('dorks.txt' , 'r')
+dorks = open('dorks.txt' , 'r', ,encoding='utf8')
 dorks_list = dorks.readlines()
 dorks.close()
 #--------------------------------------------------------------
